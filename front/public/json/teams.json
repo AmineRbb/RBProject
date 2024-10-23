@@ -1,0 +1,28 @@
+{
+    "teams":[
+        {
+            "name": "Rabbouch",
+            "image": "/image.jpg",
+            "joueurs": [
+                {
+                    "name":"amine"
+                },
+                {
+                    "name":"dalil"
+                }
+            ]
+        },
+        {
+            "name": "Oof Factory",
+            "image": "/image.jpg",
+            "joueurs": [
+                {
+                    "name":"YanisH"
+                },
+                {
+                    "name":"Bulent"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "id": 2,
+    "name": "Dalil",
+    "team": "RABBOUCH",
+    "commentary": "Joueur talentueux, la légende aux 5 tournois.",
+    "photo":"/photo/dalil.jpg",
+    "mains": [
+        {
+            "id": 1,
+            "name": "Cloud",
+            "image": "/persoPhoto/CloudImg.webp"
+        },
+        {
+            "id": 1,
+            "name": "KingKRool",
+            "image": "/persoPhoto/KingKRoolImg.webp"
+        }
+    ],
+    "secondaries": [
+        {
+            "id": 1,
+            "name": "Steve",
+            "image": "/persoPhoto/SteveImg.webp"
+        }
+    ],
+    "results": [
+        {
+            "id": 1,
+            "name": "Rabbouch Project 6",
+            "placement": {
+                "place": "1",
+                "wins": ["bulent", "antony"],
+                "lose": ["hugo", "guillaume"]
+            },
+            "value": "Rang S",
+            "date": "2024-01-01"
+        },
+        {
+            "id": 2,
+            "name": "Rabbouch Project 7",
+            "placement": {
+                "place": "1",
+                "wins": ["bulent", "antony"],
+                "lose": ["hugo", "guillaume"]
+            },
+            "value": "Rang S",
+            "date": "2024-02-28"
+        },
+        {
+            "id": 3,
+            "name": "Rabbouch Project 8",
+            "placement": {
+                "place": "5-6",
+                "wins": ["bulent", "antony"],
+                "lose": ["hugo", "guillaume"]
+            },
+            "value": "Rang S+",
+            "date": "2024-07-10"
+        },
+        {
+            "id": 4,
+            "name": "LossaCup",
+            "placement": {
+                "place": "1",
+                "wins": ["bulent", "antony"],
+                "lose": ["hugo", "guillaume"]
+            },
+            "value": "Rang B",
+            "date": "2024-08-22"
+        },
+        {
+            "id": 4,
+            "name": "LaurentoCup",
+            "placement": {
+                "place": "1",
+                "wins": ["bulent", "antony"],
+                "lose": ["hugo", "guillaume"]
+            },
+            "value": "Rang B+",
+            "date": "2024-08-24"
+        },
+        {
+            "id": 5,
+            "name": "Rabbouch Project X",
+            "placement": {
+                "place": "3",
+                "wins": ["bulent", "antony"],
+                "lose": ["hugo", "guillaume"]
+            },
+            "value": "Rang S",
+            "date": "2024-09-29"
+        }
+    ]
+}

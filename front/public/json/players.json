@@ -1,0 +1,39 @@
+{
+    "players":[
+       {
+        "name":"amine",
+        "team":"Rabbouch",
+        "place": 4,
+        "tier": 1,
+        "image": "/persoPhoto/DiddyImg.webp"
+       }, 
+       {
+        "name":"dalil",
+        "team":"Rabbouch",
+        "place": 1,
+        "tier": 1,
+        "image": "/persoPhoto/CloudImg.webp"
+       },
+       {
+        "name":"yanisH",
+        "team":"Oof Factory",
+        "place": 15,
+        "tier": 3,
+        "image": "/persoPhoto/CloudImg.webp"
+       },
+       {
+        "name":"bulent",
+        "team":"Oof Factory",
+        "place": 9,
+        "tier": 2,
+        "image": "/persoPhoto/CloudImg.webp"
+       },
+       {
+        "name":"AxelB",
+        "team":"ESIEE",
+        "place": 0,
+        "tier": 1,
+        "image": "/persoPhoto/SteveImg.webp"
+       } 
+    ]
+}
