@@ -2,7 +2,6 @@
 import { Card, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Header from "@/app/component/header";
 
@@ -43,8 +42,7 @@ const capitalizeName = (name: string) => {
     return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 };
 
-export default function pagePlayerId({ params }: { params: { playerId: string }}) {
-    const router = useRouter();
+export default function PagePlayerId({ params }: { params: { playerId: string }}) {
 
     const [playerDetails, setPlayerDetails] = useState<PlayerData>();
 

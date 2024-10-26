@@ -27,7 +27,7 @@ const capitalizeName = (name: string) => {
     return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 };
 
-export default function pagePlayer() {
+export default function PagePlayer() {
     const router = useRouter();
 
     const [playerList, setPlayerList] = useState<PlayerList>();
