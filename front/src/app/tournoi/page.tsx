@@ -56,10 +56,16 @@ export default function Tournoi() {
     const getCardColor = (rang: string) => {
         switch (rang) {
             case "S":
+            case "S+":
+            case "S-":
                 return "border border-yellow-500 bg-yellow-100 text-yellow-600 px-2 py-1 rounded-md"; // Couleur pour le rang S
             case "A":
+            case "A-":
+            case "A+":
                 return "border border-red-500 bg-red-100 text-red-600 px-2 py-1 rounded-md"; // Couleur pour le rang A
             case "B":
+            case "B-":
+            case "B+":
                 return "border border-blue-500 bg-blue-100 text-blue-600 px-2 py-1 rounded-md"; // Couleur pour le rang B
             default:
                 return "border border-red-500 bg-red-100 text-red-600 px-2 py-1 rounded-md"; // Couleur par défaut
