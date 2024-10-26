@@ -1,0 +1,46 @@
+{
+    "tournois":[
+        {
+            "id":1,
+            "nameForLink": "rabbouchProjectX",
+            "name":"Rabbouch Project X",
+            "logo":"/tournoiLogoPhoto/RabbouchProjectX.png",
+            "nbJoueurs":25,
+            "rang": "S",
+            "date": "29/09/2024",
+            "bigThree": {
+                "first":"Hugo",
+                "second":"Arthur",
+                "third":"Dalil"
+            }
+        },
+        {
+            "id":2,
+            "name":"Rabbouch Project 9",
+            "nameForLink": "rabbouchProject9",
+            "logo":"/tournoiLogoPhoto/RabbouchProjectX.png",
+            "nbJoueurs":16,
+            "rang": "A",
+            "date": "29/07/2024",
+            "bigThree": {
+                "first":"Hugo",
+                "second":"Arthur",
+                "third":"Amine"
+            }
+        },
+        {
+            "id":3,
+            "name":"Rabbouch Project 8",
+            "nameForLink": "rabbouchProject8",
+            "logo":"/tournoiLogoPhoto/RabbouchProjectX.png",
+            "nbJoueurs":40,
+            "rang": "B",
+            "date": "28/04/2024",
+            "bigThree": {
+                "first":"Arthur",
+                "second":"Hugo",
+                "third":"Amine"
+            }
+        }
+    ]
+}

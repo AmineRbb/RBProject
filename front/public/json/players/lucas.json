@@ -1,0 +1,73 @@
+{
+    "id":1,
+    "name": "Lucas",
+    "team": "RABBOUCH",
+    "age": "24 ans",
+    "commentary": "Later",
+    "photo":"/photo/amine.jpg",
+    "mains":[
+        {
+            "id":1,
+            "name":"Sephiroth",
+            "image": "/persoPhoto/SephirothImg.webp"
+        }
+    ],
+    "secondaries":[
+        {
+            "id":1,
+            "name":"Bowser",
+            "image": "/persoPhoto/BowserImg.webp"
+        },
+        {
+            "id":4,
+            "name":"Donkey Kong",
+            "image": "/persoPhoto/DonkeyKongImg.webp"
+        }
+    ],
+    "results":[
+        {
+            "id":1,
+            "name": "Rabbouch Project X",
+            "placement":{
+                "place": "13-16",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date":"2024-09-29"
+        },
+        {
+            "id":5,
+            "name": "Rabbouch Project 9",
+            "placement":{
+                "place": "9-12",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang A",
+            "date":"2024-07-28"
+        },
+        {
+            "id": 9,
+            "name": "Rabbouch Project 7",
+            "placement": {
+                "place": "9-12",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date": "2024-02-28"
+        },
+        {
+            "id": 1,
+            "name": "Rabbouch Project 6",
+            "placement": {
+                "place": "5-6",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang A",
+            "date": "2024-01-01"
+        }
+    ]
+}

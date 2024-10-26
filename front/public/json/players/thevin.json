@@ -1,0 +1,73 @@
+{
+    "id":1,
+    "name": "Thevin",
+    "team": "Oof Factory",
+    "age": "23 ans",
+    "commentary": "Later",
+    "photo":"/photo/amine.jpg",
+    "mains":[
+        {
+            "id":1,
+            "name":"Joker",
+            "image": "/persoPhoto/JokerImg.webp"
+        }
+    ],
+    "secondaries":[
+        {
+            "id":1,
+            "name":"Bayonetta",
+            "image": "/persoPhoto/BayonettaImg.webp"
+        },
+        {
+            "id":4,
+            "name":"Corrin",
+            "image": "/persoPhoto/CorrinImg.webp"
+        }
+    ],
+    "results":[
+        {
+            "id":5,
+            "name": "Rabbouch Project 9",
+            "placement":{
+                "place": "13-16",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang A",
+            "date":"2024-07-28"
+        },
+        {
+            "id":8,
+            "name": "Rabbouch Project 8",
+            "placement":{
+                "place": "13-16",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S+",
+            "date":"2024-04-28"
+        },
+        {
+            "id": 9,
+            "name": "Rabbouch Project 7",
+            "placement": {
+                "place": "13-16",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date": "2024-02-28"
+        },
+        {
+            "id": 1,
+            "name": "Rabbouch Project 6",
+            "placement": {
+                "place": "9-12",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang A",
+            "date": "2024-01-01"
+        }
+    ]
+}

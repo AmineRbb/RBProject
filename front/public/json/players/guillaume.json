@@ -1,0 +1,100 @@
+{
+    "id":1,
+    "name": "Guillaume",
+    "team": "Lossa Gang",
+    "age": "23 ans",
+    "commentary": "later",
+    "photo":"/photo/amine.jpg",
+    "mains":[
+        {
+            "id":1,
+            "name":"Mii Gunner",
+            "image": "/persoPhoto/MiiGunnerImg.webp"
+        },
+        {
+            "id":1,
+            "name":"Pit",
+            "image": "/persoPhoto/PitImg.webp"
+        }
+    ],
+    "secondaries":[
+        {
+            "id":1,
+            "name":"Megaman",
+            "image": "/persoPhoto/MegamanImg.webp"
+        },
+        {
+            "id":1,
+            "name":"Ness",
+            "image": "/persoPhoto/NessImg.webp"
+        }
+    ],
+    "results":[
+        {
+            "id":1,
+            "name": "Rabbouch Project X",
+            "placement":{
+                "place": "4",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date":"2024-09-29"
+        },
+        {
+            "id":2,
+            "name": "Laurento Cup",
+            "placement":{
+                "place": "3",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang B+",
+            "date":"2024-08-24"
+        },
+        {
+            "id":6,
+            "name": "BibiCup 2",
+            "placement":{
+                "place": "1",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang B",
+            "date":"2024-06-01"
+        },
+        {
+            "id":7,
+            "name": "BibiCup",
+            "placement":{
+                "place": "3",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang B",
+            "date":"2024-05-10"
+        },
+        {
+            "id":8,
+            "name": "Rabbouch Project 8",
+            "placement":{
+                "place": "9-12",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S+",
+            "date":"2024-04-28"
+        },
+        {
+            "id": 1,
+            "name": "Rabbouch Project 6",
+            "placement": {
+                "place": "3",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang A",
+            "date": "2024-01-01"
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "id":1,
+    "name": "Bulent",
+    "team": "Oof Factory",
+    "age": "23 ans",
+    "commentary": "later",
+    "photo":"/photo/amine.jpg",
+    "mains":[
+        {
+            "id":1,
+            "name":"Pyra Mythra",
+            "image": "/persoPhoto/PyraImg.webp"
+        }
+    ],
+    "secondaries":[
+    ],
+    "results":[
+        {
+            "id":1,
+            "name": "Rabbouch Project X",
+            "placement":{
+                "place": "5-6",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date":"2024-09-29"
+        },
+        {
+            "id":2,
+            "name": "Laurento Cup",
+            "placement":{
+                "place": "5-6",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang B+",
+            "date":"2024-08-24"
+        },
+        {
+            "id":4,
+            "name": "Don't Touch the Rabbouch",
+            "placement":{
+                "place": "3",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang B+",
+            "date":"2024-08-21"
+        },
+        {
+            "id":5,
+            "name": "Rabbouch Project 9",
+            "placement":{
+                "place": "4",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang A",
+            "date":"2024-07-28"
+        },
+        {
+            "id":8,
+            "name": "Rabbouch Project 8",
+            "placement":{
+                "place": "7-8",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S+",
+            "date":"2024-04-28"
+        },
+        {
+            "id": 9,
+            "name": "Rabbouch Project 7",
+            "placement": {
+                "place": "7-8",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date": "2024-02-28"
+        }
+    ]
+}

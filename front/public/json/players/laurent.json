@@ -1,0 +1,96 @@
+{
+    "id":1,
+    "name": "Laurent",
+    "team": "Lossa Gang",
+    "age": "23 ans",
+    "commentary": "later",
+    "photo":"/photo/amine.jpg",
+    "mains":[
+        {
+            "id":1,
+            "name":"Zelda",
+            "image": "/persoPhoto/ZeldaImg.webp"
+        }
+    ],
+    "secondaries":[
+    ],
+    "results":[
+        {
+            "id":2,
+            "name": "Laurento Cup",
+            "placement":{
+                "place": "5-6",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang B+",
+            "date":"2024-08-24"
+        },
+        {
+            "id":3,
+            "name": "Lossa Cup",
+            "placement":{
+                "place": "3",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang B",
+            "date":"2024-08-22"
+        },
+        {
+            "id":3,
+            "name": "Don't Touch the Rabbouch",
+            "placement":{
+                "place": "4",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang B+",
+            "date":"2024-08-22"
+        },
+        {
+            "id":5,
+            "name": "Rabbouch Project 9",
+            "placement":{
+                "place": "7-8",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang A",
+            "date":"2024-07-28"
+        },
+        {
+            "id":6,
+            "name": "BibiCup 2",
+            "placement":{
+                "place": "3",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang B",
+            "date":"2024-06-01"
+        },
+        {
+            "id":8,
+            "name": "Rabbouch Project 8",
+            "placement":{
+                "place": "9-12",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S+",
+            "date":"2024-04-28"
+        },
+        {
+            "id": 9,
+            "name": "Rabbouch Project 7",
+            "placement": {
+                "place": "5-6",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date": "2024-02-28"
+        }
+    ]
+}

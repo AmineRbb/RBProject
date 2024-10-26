@@ -1,0 +1,30 @@
+{
+    "id":1,
+    "name": "Stefano",
+    "team": "Lossa Gang",
+    "age": "17 ans",
+    "commentary": "Later",
+    "photo":"/photo/amine.jpg",
+    "mains":[
+        {
+            "id":1,
+            "name":"Pikachu",
+            "image": "/persoPhoto/PikachuImg.webp"
+        }
+    ],
+    "secondaries":[
+    ],
+    "results":[
+        {
+            "id":1,
+            "name": "Rabbouch Project X",
+            "placement":{
+                "place": "17-24",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date":"2024-09-29"
+        }
+    ]
+}

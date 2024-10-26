@@ -21,6 +21,11 @@
             "id": 1,
             "name": "Steve",
             "image": "/persoPhoto/SteveImg.webp"
+        },
+        {
+            "id": 1,
+            "name": "Luigi",
+            "image": "/persoPhoto/LuigiImg.webp"
         }
     ],
     "results": [
@@ -29,8 +34,8 @@
             "name": "Rabbouch Project 6",
             "placement": {
                 "place": "1",
-                "wins": ["bulent", "antony"],
-                "lose": ["hugo", "guillaume"]
+                "wins": ["amine", "denzel"],
+                "lose": ["denzel"]
             },
             "value": "Rang S",
             "date": "2024-01-01"
@@ -40,8 +45,8 @@
             "name": "Rabbouch Project 7",
             "placement": {
                 "place": "1",
-                "wins": ["bulent", "antony"],
-                "lose": ["hugo", "guillaume"]
+                "wins": ["amine", "laurent"],
+                "lose": []
             },
             "value": "Rang S",
             "date": "2024-02-28"
@@ -51,8 +56,8 @@
             "name": "Rabbouch Project 8",
             "placement": {
                 "place": "5-6",
-                "wins": ["bulent", "antony"],
-                "lose": ["hugo", "guillaume"]
+                "wins": ["guillaume", "antony"],
+                "lose": ["amine", "arthur"]
             },
             "value": "Rang S+",
             "date": "2024-07-10"
@@ -62,8 +67,8 @@
             "name": "LossaCup",
             "placement": {
                 "place": "1",
-                "wins": ["bulent", "antony"],
-                "lose": ["hugo", "guillaume"]
+                "wins": ["amine", "laurent"],
+                "lose": ["amine"]
             },
             "value": "Rang B",
             "date": "2024-08-22"
@@ -73,8 +78,8 @@
             "name": "LaurentoCup",
             "placement": {
                 "place": "1",
-                "wins": ["bulent", "antony"],
-                "lose": ["hugo", "guillaume"]
+                "wins": ["amine", "guillaume"],
+                "lose": ["amine"]
             },
             "value": "Rang B+",
             "date": "2024-08-24"
@@ -84,8 +89,8 @@
             "name": "Rabbouch Project X",
             "placement": {
                 "place": "3",
-                "wins": ["bulent", "antony"],
-                "lose": ["hugo", "guillaume"]
+                "wins": ["guillaume", "bulent"],
+                "lose": ["arthur"]
             },
             "value": "Rang S",
             "date": "2024-09-29"

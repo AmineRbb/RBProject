@@ -1,0 +1,41 @@
+{
+    "id":1,
+    "name": "Antonin",
+    "team": "ESIEE",
+    "age": "23 ans",
+    "commentary": "Later",
+    "photo":"/photo/amine.jpg",
+    "mains":[
+        {
+            "id":1,
+            "name":"ROB",
+            "image": "/persoPhoto/ROBImg.webp"
+        }
+    ],
+    "secondaries":[
+    ],
+    "results":[
+        {
+            "id":1,
+            "name": "Rabbouch Project X",
+            "placement":{
+                "place": "17-24",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date":"2024-09-29"
+        },
+        {
+            "id": 9,
+            "name": "Rabbouch Project 7",
+            "placement": {
+                "place": "25-32",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date": "2024-02-28"
+        }
+    ]
+}

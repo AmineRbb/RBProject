@@ -59,7 +59,6 @@ export default function pagePlayerId({ params }: { params: { playerId: string }}
             data.results.sort((a: TournamentResult, b: TournamentResult) => {
                 return new Date(b.date).getTime() - new Date(a.date).getTime();
             })
-            console.log(data)
             setPlayerDetails(data);
         } catch (error) {
             console.error("Erreur lors de la récupération des données :", error);
@@ -84,35 +83,26 @@ const getColorForPlacement = (place: string) => {
         "33-40": "bg-gray-950",
         "41": "bg-indigo-500",
     };
-    return placementColors[place] || "bg-gray-300"; // Couleur par défaut
+    return placementColors[place] || "bg-gray-300"; 
+};
+
+const [showMajorTournaments, setShowMajorTournaments] = useState(false);
+
+const filterMajorTournaments = (results: TournamentResult[]) => {
+    const majorRanks = ["Rang S+", "Rang S", "Rang S-", "Rang A+", "Rang A", "Rang A-"];
+    return showMajorTournaments
+        ? results.filter((result) => majorRanks.includes(result.value))
+        : results;
 };
 
     return (
         <div>
-            <div className="bg-white">
-                    <div className="MontserratSemiTitle p-3 ml-5 uppercase">
+            <div className="bg-white sticky top-0 z-10">
+                    <div className="MontserratSemiTitle p-3 ml-5 uppercase font-bold">
                         {playerDetails?.name}
                     </div>
             </div>
         <div className="px-12 py-12">
-           <div className="flex flex-row items-center justify-center m-12 space-x-8">
-                <div className="w-full flex justify-center">
-                    <div className="relative">
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 opacity-25 blur-lg"></div>
-                        <div className="relative w-full h-96 overflow-hidden">
-                            <Image
-                            src={playerDetails?.photo}
-                            alt={playerDetails?.name}
-                            className="rounded-full border-4 border-white shadow-lg"
-                            width={2000}
-                            height={500}
-                            priority
-                        />
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
             <div className="flex flex-row justify-between mb-12">
                 <Card className="flex flex-col px-5 gap-6 shadow-lg w-1/3 py-10">
                     <div className="text-lg">
@@ -182,7 +172,17 @@ const getColorForPlacement = (place: string) => {
             </div>
             <div>
                 <Card className="p-6 bg-white shadow-lg rounded-lg">
-                    <h2 className="text-3xl font-bold mb-4 text-gray-800">Résultats</h2>
+                <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-3xl font-bold text-gray-800">Résultats</h2>
+                    <button
+                        onClick={() => setShowMajorTournaments(!showMajorTournaments)}
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-md transition duration-300"
+                    >
+                        {showMajorTournaments
+                            ? "Afficher tous les tournois"
+                            : "Afficher seulement les tournois majeurs"}
+                    </button>
+                </div>
                     <Table className="w-full">
                         <TableHeader>
                             <TableRow className="bg-gray-200">
@@ -196,7 +196,7 @@ const getColorForPlacement = (place: string) => {
                         </TableHeader>
                         <TableBody>
                             {
-                                playerDetails?.results.map((result) => (
+                                filterMajorTournaments(playerDetails?.results || []).map((result) => (
                                     <TableRow key={result.id} className="hover:bg-gray-100 transition-colors">
                                         <TableCell>{result.date}</TableCell>
                                         <TableCell className="flex items-center">
@@ -228,3 +228,28 @@ const getColorForPlacement = (place: string) => {
     </div>
     )
 }
+
+
+
+/*
+
+<div className="flex flex-row items-center justify-center m-12 space-x-8">
+                <div className="w-full flex justify-center">
+                    <div className="relative">
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 opacity-25 blur-lg"></div>
+                        <div className="relative w-full h-96 overflow-hidden">
+                            <Image
+                            src={playerDetails?.photo}
+                            alt={playerDetails?.name}
+                            className="rounded-full border-4 border-white shadow-lg"
+                            width={2000}
+                            height={500}
+                            priority
+                        />
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            */

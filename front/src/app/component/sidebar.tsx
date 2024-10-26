@@ -29,7 +29,7 @@ export default function SideBar() {
                 
                 <div className="flex flex-col">
                     <Button variant="ghost" className="text-center" onClick={() => handlePage('')}> Homepage</Button>
-                    <Button variant="ghost" className="text-center" onClick={() => handlePage('')}> Tournois</Button>
+                    <Button variant="ghost" className="text-center" onClick={() => handlePage('tournoi')}> Tournois</Button>
                     <Button variant="ghost" className="text-center" onClick={() => handlePage('player')}> Joueurs</Button>
                     <Button variant="ghost" className="text-center" onClick={() => handlePage('')}> Teams</Button>
                     <Button variant="ghost" className="text-center" onClick={() => handlePage('')}> Règles</Button>

@@ -1,0 +1,62 @@
+{
+    "id":1,
+    "name": "Arthur",
+    "team": "Codyssée",
+    "age": "24 ans",
+    "commentary": "later",
+    "photo":"/photo/amine.jpg",
+    "mains":[
+        {
+            "id":1,
+            "name":"Cloud",
+            "image": "/persoPhoto/CloudImg.webp"
+        }
+    ],
+    "secondaries":[
+        {
+            "id":1,
+            "name":"Yoshi",
+            "image": "/persoPhoto/YoshiImg.webp"
+        },
+        {
+            "id":1,
+            "name":"Corrin",
+            "image": "/persoPhoto/CorrinImg.webp"
+        }
+    ],
+    "results":[
+        {
+            "id":1,
+            "name": "Rabbouch Project X",
+            "placement":{
+                "place": "2",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date":"2024-09-29"
+        },
+        {
+            "id":5,
+            "name": "Rabbouch Project 9",
+            "placement":{
+                "place": "2",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang A",
+            "date":"2024-07-28"
+        },
+        {
+            "id":8,
+            "name": "Rabbouch Project 8",
+            "placement":{
+                "place": "1",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S+",
+            "date":"2024-04-28"
+        }
+    ]
+}

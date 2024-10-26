@@ -24,9 +24,240 @@
        {
         "name":"bulent",
         "team":"Oof Factory",
+        "place": 8,
+        "tier": 2,
+        "image": "/persoPhoto/PyraImg.webp"
+       },
+       {
+        "name":"arthur",
+        "team":"Codyssée",
+        "place": 2,
+        "tier": 1,
+        "image": "/persoPhoto/CloudImg.webp"
+       },
+       {
+        "name":"hugo",
+        "team":"Oof Factory",
+        "place": 3,
+        "tier": 1,
+        "image": "/persoPhoto/Game&WatchImg.webp"
+       },
+       {
+        "name":"denzel",
+        "team":"Oof Factory",
+        "place": 5,
+        "tier": 1,
+        "image": "/persoPhoto/WiiFitTrainerImg.webp"
+       },
+       {
+        "name":"mohamed",
+        "team":"Rabbouch",
+        "place": 6,
+        "tier": 2,
+        "image": "/persoPhoto/LucinaImg.webp"
+       },
+       {
+        "name":"guillaume",
+        "team":"ESIEE",
+        "place": 7,
+        "tier": 1,
+        "image": "/persoPhoto/PitImg.webp"
+       },
+       {
+        "name":"antony",
+        "team":"Oof Factory",
         "place": 9,
         "tier": 2,
+        "image": "/persoPhoto/WolfImg.webp"
+       },
+       {
+        "name":"laurent",
+        "team":"Lossa Gang",
+        "place": 10,
+        "tier": 2,
+        "image": "/persoPhoto/ZeldaImg.webp"
+       },
+       {
+        "name":"likia",
+        "team":"Oof Factory",
+        "place": 11,
+        "tier": 2,
+        "image": "/persoPhoto/SoraImg.webp"
+       },
+       {
+        "name":"xavier",
+        "team":"Lossa Gang",
+        "place": 12,
+        "tier": 2,
+        "image": "/persoPhoto/IkeImg.webp"
+       },
+       {
+        "name":"lucas",
+        "team":"Rabbouch",
+        "place": 13,
+        "tier": 2,
+        "image": "/persoPhoto/SephirothImg.webp"
+       },
+       {
+        "name":"yanisS",
+        "team":"Lossa Gang",
+        "place": 14,
+        "tier": 3,
+        "image": "/persoPhoto/PyraImg.webp"
+       },
+       {
+        "name":"elian",
+        "team":"Oof Factory",
+        "place": 15,
+        "tier": 3,
+        "image": "/persoPhoto/CorrinImg.webp"
+       },
+       {
+        "name":"thevin",
+        "team":"Oof Factory",
+        "place": 16,
+        "tier": 3,
+        "image": "/persoPhoto/JokerImg.webp"
+       },
+       {
+        "name":"alves",
+        "team":"Oof Factory",
+        "place": 17,
+        "tier": 3,
+        "image": "/persoPhoto/JokerImg.webp"
+       },
+       {
+        "name":"youness",
+        "team":"Oof Factory",
+        "place": 19,
+        "tier": 4,
+        "image": "/persoPhoto/PalutenaImg.webp"
+       },
+       {
+        "name":"varshi",
+        "team":"Oof Factory",
+        "place": 20,
+        "tier": 4,
+        "image": "/persoPhoto/SteveImg.webp"
+       },
+       {
+        "name":"yanisG",
+        "team":"Lossa Gang",
+        "place": 21,
+        "tier": 2,
+        "image": "/persoPhoto/ZSSImg.webp"
+       },
+       {
+        "name":"Etienne",
+        "team":"ESIEE",
+        "place": 22,
+        "tier": 4,
+        "image": "/persoPhoto/JokerImg.webp"
+       },
+       {
+        "name":"Adchayan",
+        "team":"Oof Factory",
+        "place": 23,
+        "tier": 4,
+        "image": "/persoPhoto/NessImg.webp"
+       },
+       {
+        "name":"Sany",
+        "team":"Lossa Gang",
+        "place": 24,
+        "tier": 2,
         "image": "/persoPhoto/CloudImg.webp"
+       },
+       {
+        "name":"Erwann",
+        "team":"ESIEE",
+        "place": 25,
+        "tier": 5,
+        "image": "/persoPhoto/MetaknightImg.webp"
+       },
+       {
+        "name":"Kabbilan",
+        "team":"Oof Factory",
+        "place": 26,
+        "tier": 5,
+        "image": "/persoPhoto/CloudImg.webp"
+       },
+       {
+        "name":"Thibault",
+        "team":"Oof Factory",
+        "place": 27,
+        "tier": 5,
+        "image": "/persoPhoto/FelinfernoImg.webp"
+       },
+       {
+        "name":"Apilash",
+        "team":"Oof Factory",
+        "place": 28,
+        "tier": 5,
+        "image": "/persoPhoto/PyraImg.webp"
+       },
+       {
+        "name":"Maksen",
+        "team":"Lossa Gang",
+        "place": 29,
+        "tier": 5,
+        "image": "/persoPhoto/KingKRoolImg.webp"
+       },
+       {
+        "name":"Darren",
+        "team":"Lossa Gang",
+        "place": 30,
+        "tier": 5,
+        "image": "/persoPhoto/KingKRoolImg.webp"
+       },
+       {
+        "name":"Lounis",
+        "team":"Lossa Gang",
+        "place": 31,
+        "tier": 5,
+        "image": "/persoPhoto/FelinfernoImg.webp"
+       },
+       {
+        "name":"Sharaman",
+        "team":"Oof Factory",
+        "place": 32,
+        "tier": 5,
+        "image": "/persoPhoto/FelinfernoImg.webp"
+       },
+       {
+        "name":"Stefano",
+        "team":"Lossa Gang",
+        "place": 0,
+        "tier": 5,
+        "image": "/persoPhoto/PikachuImg.webp"
+       },
+       {
+        "name":"Antonin",
+        "team":"ESIEE",
+        "place": 0,
+        "tier": 5,
+        "image": "/persoPhoto/ROBImg.webp"
+       },
+       {
+        "name":"Ayanleh",
+        "team":"ESIEE",
+        "place": 0,
+        "tier": 5,
+        "image": "/persoPhoto/MarioImg.webp"
+       },
+       {
+        "name":"Axel",
+        "team":"Codyssée",
+        "place": 0,
+        "tier": 2,
+        "image": "/persoPhoto/PacManImg.webp"
+       },
+       {
+        "name":"P.Mohamed",
+        "team":"Rabbouch",
+        "place": 0,
+        "tier": 4,
+        "image": "/persoPhoto/IceClimbersImg.webp"
        },
        {
         "name":"AxelB",

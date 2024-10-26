@@ -1,42 +1,27 @@
 {
     "id":1,
-    "name": "Amine",
-    "team": "RABBOUCH",
-    "age": "23 ans",
-    "commentary": "Fondateur des tournois, il a participé à toutes les éditions. avec des positions entre la 1ere et la 5e place",
+    "name": "Sany",
+    "team": "Lossa Gang",
+    "age": "20 ans",
+    "commentary": "Later",
     "photo":"/photo/amine.jpg",
     "mains":[
         {
             "id":1,
-            "name":"Diddy Kong",
-            "image": "/persoPhoto/DiddyImg.webp"
+            "name":"Cloud",
+            "image": "/persoPhoto/CloudImg.webp"
         }
     ],
     "secondaries":[
         {
             "id":1,
-            "name":"Wario",
-            "image": "/persoPhoto/WarioImg.webp"
-        },
-        {
-            "id":2,
-            "name":"Steve",
-            "image": "/persoPhoto/SteveImg.webp"
-        },
-        {
-            "id":3,
-            "name":"Olimar",
-            "image": "/persoPhoto/OlimarImg.webp"
+            "name":"King K Rool",
+            "image": "/persoPhoto/KingKRoolImg.webp"
         },
         {
             "id":4,
-            "name":"ROB",
-            "image": "/persoPhoto/ROBImg.webp"
-        },
-        {
-            "id":4,
-            "name":"Pyra Mythra",
-            "image": "/persoPhoto/PyraImg.webp"
+            "name":"Lucario",
+            "image": "/persoPhoto/LucarioImg.webp"
         }
     ],
     "results":[
@@ -44,9 +29,9 @@
             "id":1,
             "name": "Rabbouch Project X",
             "placement":{
-                "place": "5-6",
-                "wins": ["bulent", "antony"],
-                "lose": ["hugo", "guillaume"]
+                "place": "9-12",
+                "wins": [],
+                "lose": []
             },
             "value": "Rang S",
             "date":"2024-09-29"
@@ -55,9 +40,9 @@
             "id":2,
             "name": "Laurento Cup",
             "placement":{
-                "place": "2",
-                "wins": ["dalil", "guillaume"],
-                "lose": ["dalil"]
+                "place": "7-8",
+                "wins": [],
+                "lose": []
             },
             "value": "Rang B+",
             "date":"2024-08-24"
@@ -66,9 +51,9 @@
             "id":3,
             "name": "Lossa Cup",
             "placement":{
-                "place": "2",
-                "wins": ["guillaume", "dalil"],
-                "lose": ["dalil"]
+                "place": "5-6",
+                "wins": [],
+                "lose": []
             },
             "value": "Rang B",
             "date":"2024-08-22"
@@ -77,9 +62,9 @@
             "id":4,
             "name": "Don't Touch the Rabbouch",
             "placement":{
-                "place": "2",
-                "wins": ["hugo", "bulent"],
-                "lose": ["hugo"]
+                "place": "5-6",
+                "wins": [],
+                "lose": []
             },
             "value": "Rang B+",
             "date":"2024-08-21"
@@ -88,9 +73,9 @@
             "id":5,
             "name": "Rabbouch Project 9",
             "placement":{
-                "place": "3",
-                "wins": ["bulent", "antony"],
-                "lose": ["hugo", "arthur"]
+                "place": "13-16",
+                "wins": [],
+                "lose": []
             },
             "value": "Rang A",
             "date":"2024-07-28"
@@ -99,9 +84,9 @@
             "id":6,
             "name": "BibiCup 2",
             "placement":{
-                "place": "2",
-                "wins": ["sany", "laurent"],
-                "lose": ["guillaume"]
+                "place": "4",
+                "wins": [],
+                "lose": []
             },
             "value": "Rang B",
             "date":"2024-06-01"
@@ -110,9 +95,9 @@
             "id":7,
             "name": "BibiCup",
             "placement":{
-                "place": "1",
-                "wins": ["dalil", "guillaume"],
-                "lose": ["dalil"]
+                "place": "5-6",
+                "wins": [],
+                "lose": []
             },
             "value": "Rang B",
             "date":"2024-05-10"
@@ -121,9 +106,9 @@
             "id":8,
             "name": "Rabbouch Project 8",
             "placement":{
-                "place": "3",
-                "wins": ["dalil", "guillaume"],
-                "lose": ["hugo"]
+                "place": "25-32",
+                "wins": [],
+                "lose": []
             },
             "value": "Rang S+",
             "date":"2024-04-28"
@@ -132,9 +117,9 @@
             "id": 9,
             "name": "Rabbouch Project 7",
             "placement": {
-                "place": "2",
-                "wins": ["denzel", "alves"],
-                "lose": ["dalil"]
+                "place": "25-32",
+                "wins": [],
+                "lose": []
             },
             "value": "Rang S",
             "date": "2024-02-28"
@@ -143,9 +128,9 @@
             "id": 1,
             "name": "Rabbouch Project 6",
             "placement": {
-                "place": "4",
-                "wins": ["alves", "lucas"],
-                "lose": ["dalil", "denzel"]
+                "place": "13-16",
+                "wins": [],
+                "lose": []
             },
             "value": "Rang A",
             "date": "2024-01-01"

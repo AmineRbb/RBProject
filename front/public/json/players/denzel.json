@@ -1,0 +1,46 @@
+{
+    "id":1,
+    "name": "Denzel",
+    "team": "Oof Factory",
+    "age": "23 ans",
+    "commentary": "later",
+    "photo":"/photo/amine.jpg",
+    "mains":[
+        {
+            "id":1,
+            "name":"Wii Fit Trainer",
+            "image": "/persoPhoto/WiiFitTrainerImg.webp"
+        }
+    ],
+    "secondaries":[
+        {
+            "id":1,
+            "name":"Felinferno",
+            "image": "/persoPhoto/FelinfernoImg.webp"
+        }
+    ],
+    "results":[
+        {
+            "id": 9,
+            "name": "Rabbouch Project 7",
+            "placement": {
+                "place": "3",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date": "2024-02-28"
+        },
+        {
+            "id": 1,
+            "name": "Rabbouch Project 6",
+            "placement": {
+                "place": "2",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang A",
+            "date": "2024-01-01"
+        }
+    ]
+}

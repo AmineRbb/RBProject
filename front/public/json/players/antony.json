@@ -1,0 +1,83 @@
+{
+    "id":1,
+    "name": "Antony",
+    "team": "Oof Factory",
+    "age": "23 ans",
+    "commentary": "later",
+    "photo":"/photo/amine.jpg",
+    "mains":[
+        {
+            "id":1,
+            "name":"Wolf",
+            "image": "/persoPhoto/WolfImg.webp"
+        }
+    ],
+    "secondaries":[
+        {
+            "id":1,
+            "name":"Pichu",
+            "image": "/persoPhoto/PichuImg.webp"
+        },
+        {
+            "id":1,
+            "name":"Fox",
+            "image": "/persoPhoto/FoxImg.webp"
+        },
+        {
+            "id":1,
+            "name":"Pikachu",
+            "image": "/persoPhoto/PikachuImg.webp"
+        },
+        {
+            "id":1,
+            "name":"Pyra Mythra",
+            "image": "/persoPhoto/PyraImg.webp"
+        }
+    ],
+    "results":[
+        {
+            "id":1,
+            "name": "Rabbouch Project X",
+            "placement":{
+                "place": "9-12",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date":"2024-09-29"
+        },
+        {
+            "id":5,
+            "name": "Rabbouch Project 9",
+            "placement":{
+                "place": "5-6",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang A",
+            "date":"2024-07-28"
+        },
+        {
+            "id":8,
+            "name": "Rabbouch Project 8",
+            "placement":{
+                "place": "7-8",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S+",
+            "date":"2024-04-28"
+        },
+        {
+            "id": 9,
+            "name": "Rabbouch Project 7",
+            "placement": {
+                "place": "5-6",
+                "wins": [],
+                "lose": []
+            },
+            "value": "Rang S",
+            "date": "2024-02-28"
+        }
+    ]
+}

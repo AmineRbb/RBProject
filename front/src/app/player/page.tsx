@@ -55,12 +55,12 @@ export default function pagePlayer() {
     }
 
     const renderPlayerCard = (player: PlayerData, extraInfo?: string) => (
-        <button key={player.name} onClick={() => handleClick(player.name)} className="hover:shadow-lg transition-shadow duration-300">
-            <Card className="p-4 bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
+        <button key={player.name} onClick={() => handleClick(player.name)} className="hover:shadow-lg transition-shadow duration-300  transform transition-transform duration-300 hover:scale-105">
+            <Card className="p-2 bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
                 <Image
                     src={player.image}
                     alt={player.name}
-                    className="rounded-full w-40 h-40 object-cover object-top"
+                    className="rounded-full w-24 h-24 object-cover object-top"
                     width={150}
                     height={150}
                     priority
@@ -77,8 +77,8 @@ export default function pagePlayer() {
     const searchByDefault = () => (
         <Card className="p-4">
             <CardTitle className="text-center text-lg font-bold">Résultats</CardTitle>
-            <CardContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
-                {playerList?.players.map((player) => renderPlayerCard(player))}
+            <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-4">
+                {playerList?.players.sort((a, b) => a.name.localeCompare(b.name)).map((player) => renderPlayerCard(player))}
             </CardContent>
         </Card>
     );
@@ -99,7 +99,7 @@ export default function pagePlayer() {
                 {Object.keys(playerByTeam).map((team) => (
                     <Card key={team} className="p-4">
                         <CardTitle className="uppercase text-lg font-bold">{team}</CardTitle>
-                        <CardContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
+                        <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-4">
                             {playerByTeam[team].map((player) => renderPlayerCard(player))}
                         </CardContent>
                     </Card>
@@ -117,13 +117,13 @@ export default function pagePlayer() {
         return (
             <Card className="p-4">
                 <CardTitle className="text-center text-lg font-bold">Classement par Rang</CardTitle>
-                <CardContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
+                <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-4">
                     {rankedPlayers.map((player) => renderPlayerCard(player, `Rang : ${player.place}`))}
                 </CardContent>
                 {unrankedPlayers.length > 0 && (
                     <div className="mt-6">
                         <CardTitle className="text-center text-lg font-bold">Joueurs Non Classés</CardTitle>
-                        <CardContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
+                        <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-4">
                             {unrankedPlayers.map((player) => renderPlayerCard(player, "Non Classé"))}
                         </CardContent>
                     </div>
@@ -148,7 +148,7 @@ export default function pagePlayer() {
                 {Object.keys(playerByTier).map((tier) => (
                     <Card key={tier} className="p-4">
                         <CardTitle className="uppercase text-lg font-bold">Joueur Tier {tier}</CardTitle>
-                        <CardContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
+                        <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-4">
                             {playerByTier[tier].map((player) => renderPlayerCard(player))}
                         </CardContent>
                     </Card>
