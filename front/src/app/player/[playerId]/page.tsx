@@ -2,9 +2,9 @@
 import { Card, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Image from "next/image";
-import amine from "../../../../public/json/players/amine.json"
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import Header from "@/app/component/header";
 
 type PlayerData = {
     id: number;
@@ -97,11 +97,7 @@ const filterMajorTournaments = (results: TournamentResult[]) => {
 
     return (
         <div>
-            <div className="bg-white sticky top-0 z-10">
-                    <div className="MontserratSemiTitle p-3 ml-5 uppercase font-bold">
-                        {playerDetails?.name}
-                    </div>
-            </div>
+            <Header title={playerDetails?.name} />
         <div className="px-12 py-12">
             <div className="flex flex-row justify-between mb-12">
                 <Card className="flex flex-col px-5 gap-6 shadow-lg w-1/3 py-10">

@@ -3,6 +3,7 @@ import { Card, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import Header from "../component/header";
 
 type TournoiList = {
     tournois:TournoiData[]
@@ -106,11 +107,7 @@ export default function Tournoi() {
 
     return (
         <div className="min-h-screen bg-gray-100">
-            <div className="bg-white">
-                    <div className="MontserratSemiTitle p-3 ml-5">
-                        TOURNOIS
-                    </div>
-            </div>
+            <Header title={"TOURNOIS"} />
             <div className="px-4 py-6">
                 <Card className="px-4 py-6 mb-6">
                     <CardTitle className="flex justify-center text-2xl font-semibold">

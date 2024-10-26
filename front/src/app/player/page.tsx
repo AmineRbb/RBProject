@@ -4,7 +4,7 @@ import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import classNames from "classnames";
+import Header from "../component/header";
 
 
 
@@ -167,11 +167,7 @@ export default function pagePlayer() {
 
     return (
         <div>
-            <div className="bg-white">
-                    <div className="MontserratSemiTitle p-3 ml-5">
-                        JOUEURS
-                    </div>
-            </div>
+            <Header title={"JOUEURS"} />
             <div className="px-4 py-4 gap-4 space-y-4">
                 <Card className="px-4 py-4 gap-4 space-y-4">
                     <CardTitle className="flex justify-center">
@@ -182,13 +178,9 @@ export default function pagePlayer() {
                             <Button
                                 key={option}
                                 onClick={() => setSearch(option as searchList)}
-                                className={classNames(
-                                    "px-4 py-2 rounded-md font-medium transition-colors duration-200",
-                                    {
-                                        "bg-blue-600 text-white": search === option,
-                                        "bg-gray-200 text-gray-700 hover:bg-gray-300": search !== option,
-                                    }
-                                )}
+                                className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
+                                    search === option ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                                }`}
                             >
                                 {option.charAt(0).toUpperCase() + option.slice(1)}
                             </Button>

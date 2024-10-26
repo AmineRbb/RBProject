@@ -1,17 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import Header from "./component/header";
 
 
 export default function Home() {
     
     return (
         <main>
-            <div className="bg-white">
-                    <div className="MontserratSemiTitle p-3 ml-5">
-                        HOMEPAGE
-                    </div>
-            </div>
+            <Header title={"HOMEPAGE"} />
             <div className="px-12 py-12">
             <Card className="grid grid-cols-2 grid-rows-6 gap-4 max-w-full"
           style={{
@@ -32,13 +29,13 @@ export default function Home() {
                         PLANNING
                     </CardTitle>
                 </CardHeader>
-                <CardContent className="MontserratMedium">
+                <CardContent className="MontserratMedium flex flex-col align-center gap-3">
                     <div className="flex flex-row text-center">
                       <p> Découvrer le calendrier des prochains tournois de smash bros ultimate de la saison 
                         du Rabbouch Project </p>
 
                     </div>
-                    <Button  className="align-center">
+                    <Button  className="flex align-center">
                         Voir Planning
                     </Button>
                     
@@ -51,7 +48,7 @@ export default function Home() {
                         JOUEURS
                     </CardTitle>
                 </CardHeader>
-                <CardContent className="MontserratMedium">
+                <CardContent className="MontserratMedium flex flex-col align-center gap-3">
                     <div className="flex flex-row text-center">
                       <p> Voir la liste des joueurs qui ont participé aux tournois ainsi que leurs résultats </p>
 
@@ -67,7 +64,7 @@ export default function Home() {
                         TOURNOIS
                     </CardTitle>
                 </CardHeader>
-                <CardContent className="MontserratMedium">
+                <CardContent className="MontserratMedium flex flex-col align-center gap-3">
                     <div className="flex flex-row text-center">
                       <p> La liste des tournois ayant eu lieu dans depuis 27 décembre 2022 </p>
 
@@ -84,7 +81,7 @@ export default function Home() {
                         REGLES
                     </CardTitle>
                 </CardHeader>
-                <CardContent className="MontserratMedium">
+                <CardContent className="MontserratMedium flex flex-col align-center gap-3">
                     <div className="flex flex-row text-center">
                       <p> Voir les règles des tournois : choix des maps, personnages ... </p> 
                     </div>
@@ -100,7 +97,7 @@ export default function Home() {
                         RANKING
                     </CardTitle>
                 </CardHeader>
-                <CardContent className="MontserratMedium">
+                <CardContent className="MontserratMedium flex flex-col align-center gap-3">
                     <div className="flex flex-row text-center">
                       <p> Découvrer le classement des meilleurs joueurs depuis 2022 </p>
                     </div>

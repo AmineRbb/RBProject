@@ -33,6 +33,7 @@ export default function SideBar() {
                     <Button variant="ghost" className="text-center" onClick={() => handlePage('player')}> Joueurs</Button>
                     <Button variant="ghost" className="text-center" onClick={() => handlePage('')}> Teams</Button>
                     <Button variant="ghost" className="text-center" onClick={() => handlePage('')}> Règles</Button>
+                    <Button variant="ghost" className="text-center" onClick={() => handlePage('')}> Ranking</Button>
                 </div>
             </div>
         </div>
