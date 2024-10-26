@@ -5,6 +5,7 @@ import "./globals.css";
 import Footer from "./footer/footer";
 import SideBar from "./component/sidebar";
 import { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
               </footer>
             </div>
           </div>
+          <Analytics />
       </body>
     </html>
   );
