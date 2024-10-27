@@ -18,7 +18,7 @@ export default function SideBar() {
             <div className="MontserratSemi flex flex-col items-center gap-12 px-6 py-8">
                 <div className="flex flex-row space-x-16">
                     <Image
-                        src="/logo RBB.png"
+                        src="/logoRBB.png"
                         alt="Logo RBB"
                         className="dark:invert"
                         width={100}
