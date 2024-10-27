@@ -1,0 +1,40 @@
+{
+    "players": [
+      {
+        "name": "Amine",
+        "team": "RABBOUCH",
+        "place": 1,
+        "tier": 1,
+        "image": "/images/amine.jpg"
+      },
+      {
+        "name": "Dalil",
+        "team": "RABBOUCH",
+        "place": 2,
+        "tier": 1,
+        "image": "/images/dalil.jpg"
+      },
+      {
+        "name": "Guillaume",
+        "team": "LossaGang",
+        "place": 3,
+        "tier": 2,
+        "image": "/images/guillaume.jpg"
+      },
+      {
+        "name": "Arthur",
+        "team": "Codyssée",
+        "place": 4,
+        "tier": 2,
+        "image": "/images/arthur.jpg"
+      },
+      {
+        "name": "Hugo",
+        "team": "Oof Factory",
+        "place": 5,
+        "tier": 3,
+        "image": "/images/hugo.jpg"
+      }
+    ]
+  }
+  
