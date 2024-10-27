@@ -246,6 +246,13 @@
         "image": "/persoPhoto/MarioImg.webp"
        },
        {
+        "name":"steevy",
+        "team":"Oof Factory",
+        "place": 0,
+        "tier": 5,
+        "image": "/persoPhoto/AmphinobiImg.webp"
+       },
+       {
         "name":"axel",
         "team":"Codyssée",
         "place": 0,

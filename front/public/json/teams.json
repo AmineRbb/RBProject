@@ -2,27 +2,200 @@
     "teams":[
         {
             "name": "Rabbouch",
-            "image": "/image.jpg",
+            "nameForLink":"rabbouch",
+            "imageTeam": "/teamsPhoto/rabbouch.png",
+            "nbJoueurs": 5,
             "joueurs": [
                 {
-                    "name":"amine"
+                    "name":"Amine",
+                    "image": "/persoPhoto/DiddyImg.webp"
                 },
                 {
-                    "name":"dalil"
+                    "name":"Dalil",
+                    "image": "/persoPhoto/CloudImg.webp"
+                },
+                {
+                    "name":"Mohamed",
+                    "image": "/persoPhoto/LucinaImg.webp"
+                },
+                {
+                    "name":"Lucas",
+                    "image": "/persoPhoto/SephirothImg.webp"
+                },
+                {
+                    "name":"P.Mohamed",
+                    "image": "/persoPhoto/IceClimbersImg.webp"
+                }
+            ]
+        },
+        {
+            "name": "Lossa Gang",
+            "nameForLink":"lossagang",
+            "imageTeam": "/teamsPhoto/lossaGang.png",
+            "nbJoueurs": 10,
+            "joueurs": [
+                {
+                    "name":"Darren",
+                    "image": "/persoPhoto/KingKRoolImg.webp"
+                },
+                {
+                    "name":"Sany",
+                    "image": "/persoPhoto/CloudImg.webp"
+                },
+                {
+                    "name":"Yanis.G",
+                    "image": "/persoPhoto/ZSSImg.webp"
+                },
+                {
+                    "name":"Guillaume",
+                    "image": "/persoPhoto/MiiGunnerImg.webp"
+                },
+                {
+                    "name":"Maksen",
+                    "image": "/persoPhoto/KingKRoolImg.webp"
+                },
+                {
+                    "name":"YanisS",
+                    "image": "/persoPhoto/PyraImg.webp"
+                },
+                {
+                    "name":"Lounis",
+                    "image": "/persoPhoto/FelinfernoImg.webp"
+                },
+                {
+                    "name":"Xavier",
+                    "image": "/persoPhoto/IkeImg.webp"
+                },
+                {
+                    "name":"Yaspablo",
+                    "image": "/persoPhoto/FelinfernoImg.webp"
+                },
+                {
+                    "name":"Stefano",
+                    "image": "/persoPhoto/PikachuImg.webp"
                 }
             ]
         },
         {
             "name": "Oof Factory",
-            "image": "/image.jpg",
+            "nameForLink":"oofFactory",
+            "imageTeam": "/teamsPhoto/oofFactory.jpg",
+            "nbJoueurs": 17,
             "joueurs": [
                 {
-                    "name":"YanisH"
+                    "name":"Yanis.H",
+                    "image": "/persoPhoto/ROBImg.webp"
                 },
                 {
-                    "name":"Bulent"
+                    "name":"Adchayan",
+                    "image": "/persoPhoto/NessImg.webp"
+                },
+                {
+                    "name":"Bulent",
+                    "image": "/persoPhoto/PyraImg.webp"
+                },
+                {
+                    "name":"Antony",
+                    "image": "/persoPhoto/WolfImg.webp"
+                },
+                {
+                    "name":"Denzel",
+                    "image": "/persoPhoto/WiiFitTrainerImg.webp"
+                },
+                {
+                    "name":"Elian",
+                    "image": "/persoPhoto/CorrinImg.webp"
+                },
+                {
+                    "name":"Likia",
+                    "image": "/persoPhoto/SoraImg.webp"
+                },
+                {
+                    "name":"Alves",
+                    "image": "/persoPhoto/JokerImg.webp"
+                },
+                {
+                    "name":"Apilash",
+                    "image": "/persoPhoto/PyraImg.webp"
+                },
+                {
+                    "name":"Kabbilan",
+                    "image": "/persoPhoto/CloudImg.webp"
+                },
+                {
+                    "name":"Thevin",
+                    "image": "/persoPhoto/JokerImg.webp"
+                },
+                {
+                    "name":"Hugo",
+                    "image": "/persoPhoto/Game&WatchImg.webp"
+                },
+                {
+                    "name":"Thibault",
+                    "image": "/persoPhoto/ROBImg.webp"
+                },
+                {
+                    "name":"Youness",
+                    "image": "/persoPhoto/PalutenaImg.webp"
+                },
+                {
+                    "name":"Sharaman",
+                    "image": "/persoPhoto/FelinfernoImg.webp"
+                },
+                {
+                    "name":"Steevy",
+                    "image": "/persoPhoto/AmphinobiImg.webp"
+                },
+                {
+                    "name":"Varshi",
+                    "image": "/persoPhoto/SteveImg.webp"
+                }
+            ]
+        },
+        {
+            "name": "ESIEE",
+            "nameForLink":"esiee",
+            "imageTeam": "/teamsPhoto/esiee.png",
+            "nbJoueurs": 5,
+            "joueurs": [
+                {
+                    "name":"Etienne",
+                    "image": "/persoPhoto/JokerImg.webp"
+                },
+                {
+                    "name":"Erwann",
+                    "image": "/persoPhoto/MetaknightImg.webp"
+                },
+                {
+                    "name":"Antonin",
+                    "image": "/persoPhoto/ROBImg.webp"
+                },
+                {
+                    "name":"Ayanleh",
+                    "image": "/persoPhoto/MarioImg.webp"
+                },
+                {
+                    "name":"Axel.B",
+                    "image": "/persoPhoto/BowserImg.webp"
+                }
+            ]
+        },
+        {
+            "name": "Codyssée",
+            "nameForLink":"codyssee",
+            "imageTeam": "/teamsPhoto/codyssee.png",
+            "nbJoueurs": 2,
+            "joueurs": [
+                {
+                    "name":"Arthur",
+                    "image": "/persoPhoto/CloudImg.webp"
+                },
+                {
+                    "name":"Axel",
+                    "image": "/persoPhoto/PacManImg.webp"
                 }
             ]
         }
+        
     ]
 }
