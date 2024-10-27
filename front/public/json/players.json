@@ -253,6 +253,13 @@
         "image": "/persoPhoto/AmphinobiImg.webp"
        },
        {
+        "name":"yaspablo",
+        "team":"Lossa Gang",
+        "place": 0,
+        "tier": 5,
+        "image": "/persoPhoto/FelinfernoImg.webp"
+       },
+       {
         "name":"axel",
         "team":"Codyssée",
         "place": 0,

@@ -1,23 +1,18 @@
 {
     "id":1,
-    "name": "Lounis",
-    "team": "Lossa Gang",
-    "age": "20 ans",
+    "name": "Steevy",
+    "team": "Oof Factory",
+    "age": "28 ans",
     "commentary": "Later",
     "photo":"/photo/amine.jpg",
     "mains":[
         {
             "id":1,
-            "name":"Felinferno",
-            "image": "/persoPhoto/FelinfernoImg.webp"
+            "name":"Amphinobi",
+            "image": "/persoPhoto/AmphinobiImg.webp"
         }
     ],
     "secondaries":[
-        {
-            "id":1,
-            "name":"Pikachu",
-            "image": "/persoPhoto/PikachuImg.webp"
-        }
     ],
     "results":[
         {
