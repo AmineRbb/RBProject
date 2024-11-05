@@ -1,8 +1,8 @@
 {
     "id":1,
-    "name": "Sany",
-    "team": "Lossa Gang",
-    "age": "20 ans",
+    "name": "Kabbilan",
+    "team": "Oof Factory",
+    "age": "23 ans",
     "commentary": "Later",
     "photo":"/photo/amine.jpg",
     "mains":[
@@ -13,16 +13,6 @@
         }
     ],
     "secondaries":[
-        {
-            "id":1,
-            "name":"King K Rool",
-            "image": "/persoPhoto/KingKRoolImg.webp"
-        },
-        {
-            "id":4,
-            "name":"Lucario",
-            "image": "/persoPhoto/LucarioImg.webp"
-        }
     ],
     "results":[
         {
