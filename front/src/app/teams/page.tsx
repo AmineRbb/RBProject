@@ -1,13 +1,11 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import Header from '../component/header';
 import { Card, CardTitle, CardContent } from '@/components/ui/card';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Button } from '@/components/ui/button';
 
 const responsive = {
   superLargeDesktop: {
@@ -46,7 +44,6 @@ type TeamsList = {
 };
 
 export default function Teams() {
-  const router = useRouter();
   const [teamList, setTeamList] = useState<TeamsList | null>(null);
 
   useEffect(() => {
@@ -65,9 +62,6 @@ export default function Teams() {
     fetchData();
   }, []);
 
-  const handleClick = (teamName: string) => {
-    router.push('/teams/' + encodeURIComponent(teamName));
-  };
 
   const renderTeamCard = (team: TeamsData) => {
     return (
@@ -87,15 +81,6 @@ export default function Teams() {
           <div className="col-span-3 flex flex-col justify-center">
             <h2 className="text-3xl font-bold text-gray-800">{team.name}</h2>
             <p className="text-gray-600 mt-2">{`${team.nbJoueurs} joueurs`}</p>
-          </div>
-          <div className="col-span-2 flex justify-end">
-            <Button
-              onClick={() => handleClick(team.nameForLink)}
-              key={team.name}
-              className="bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 py-2 px-4 rounded-full shadow-md"
-            >
-              Voir {team.name}
-            </Button>
           </div>
           <div className="col-span-6 mt-6">
             <Carousel

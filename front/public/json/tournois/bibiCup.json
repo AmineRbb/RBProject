@@ -1,0 +1,65 @@
+{
+    "name":"BibiCup",
+    "nbJoueurs":8,
+    "date": "10/05/2024",
+    "rank":"B",
+    "logo":"/tournoiLogoPhoto/BibiCup.png",
+    "joueurs": [
+        {
+            "name":"Amine",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/DiddyImg.webp",
+            "seeding":2,
+            "place":"1"
+        },
+        {
+            "name":"Dalil",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":1,
+            "place":"2"
+        },
+        {
+            "name":"Guillaume",
+            "team": "ESIEE",
+            "imageMain": "/persoPhoto/PitImg.webp",
+            "seeding":3,
+            "place":"3"
+        },
+        {
+            "name":"Sany",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":5,
+            "place":"5-6"
+        },
+        {
+            "name":"YanisS",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/PyraImg.webp",
+            "seeding":4,
+            "place":"4"
+        },
+        {
+            "name":"Maksen",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/KingKRoolImg.webp",
+            "seeding":6,
+            "place":"5-6"
+        },
+        {
+            "name":"Darren",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/KingKRoolImg.webp",
+            "seeding":7,
+            "place":"7-8"
+        },
+        {
+            "name":"Lounis",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/FelinfernoImg.webp",
+            "seeding":8,
+            "place":"7-8"
+        }
+    ]
+}

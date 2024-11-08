@@ -1,0 +1,114 @@
+{
+    "name":"Rabbouch Project 6",
+    "nbJoueurs":16,
+    "date": "01/01/2024",
+    "rank":"A",
+    "logo":"/tournoiLogoPhoto/RabbouchProject6.png",
+    "joueurs": [
+        {
+            "name":"Amine",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/DiddyImg.webp",
+            "seeding":4,
+            "place":"4"
+        },
+        {
+            "name":"Dalil",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":1,
+            "place":"1"
+        },
+        {
+            "name":"Denzel",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/WiiFitTrainerImg.webp",
+            "seeding":3,
+            "place":"2"
+        },
+        {
+            "name":"YanisG",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/Ma rioImg.webp",
+            "seeding":9,
+            "place":"9-12"
+        },
+        {
+            "name":"Mohamed",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/NessImg.webp",
+            "seeding":7,
+            "place":"7-8"
+        },
+        {
+            "name":"Sany",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/LucarioImg.webp",
+            "seeding":12,
+            "place":"13-16"
+        },
+        {
+            "name":"Likia",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/SoraImg.webp",
+            "seeding":6,
+            "place":"5-6"
+        },
+        {
+            "name":"Adchayan",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/NessImg.webp",
+            "seeding":10,
+            "place":"13-16"
+        },
+        {
+            "name":"Thevin",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/JokerImg.webp",
+            "seeding":11,
+            "place":"9-12"
+        },
+        {
+            "name":"Lucas",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/SephirothImg.webp",
+            "seeding":8,
+            "place":"5-6"
+        },
+        {
+            "name":"YanisH",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/ROBImg.webp",
+            "seeding":13,
+            "place":"9-12"
+        },
+        {
+            "name":"Alves",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/JokerImg.webp",
+            "seeding":5,
+            "place":"9-12"
+        },
+        {
+            "name":"YanisS",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/PyraImg.webp",
+            "seeding":15,
+            "place":"7-8"
+        },
+        {
+            "name":"Rany",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/PitImg.webp",
+            "seeding":16,
+            "place":"13-16"
+        },
+        {
+            "name":"Kabbilan",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":22,
+            "place":"13-16"
+        }
+    ]
+}

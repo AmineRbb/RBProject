@@ -1,0 +1,65 @@
+{
+    "name":"LaurentoCup",
+    "nbJoueurs":8,
+    "date": "24/08/2024",
+    "rank":"B",
+    "logo":"/tournoiLogoPhoto/LaurentoCup.png",
+    "joueurs": [
+        {
+            "name":"Amine",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/DiddyImg.webp",
+            "seeding":2,
+            "place":"2"
+        },
+        {
+            "name":"Dalil",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":1,
+            "place":"1"
+        },
+        {
+            "name":"Guillaume",
+            "team": "ESIEE",
+            "imageMain": "/persoPhoto/PitImg.webp",
+            "seeding":3,
+            "place":"3"
+        },
+        {
+            "name":"Sany",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":7,
+            "place":"7-8"
+        },
+        {
+            "name":"YanisG",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/ZSSImg.webp",
+            "seeding":8,
+            "place":"4"
+        },
+        {
+            "name":"Laurent",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/ZeldaImg.webp",
+            "seeding":6,
+            "place":"5-6"
+        },
+        {
+            "name":"Bulent",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/KingKRoolImg.webp",
+            "seeding":5,
+            "place":"5-6"
+        },
+        {
+            "name":"Mohamed",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/LucinaImg.webp",
+            "seeding":3,
+            "place":"7-8"
+        }
+    ]
+}

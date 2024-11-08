@@ -67,6 +67,8 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
         return placementColors[place] || "bg-gray-300"; 
     };
 
+    const sortedPlayersBySeeding = tournamentDetails?.joueurs.sort((a, b) => a.seeding - b.seeding);
+
     return (
     <div>
         <Header title={tournamentDetails?.name} />
@@ -93,7 +95,7 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
                     <Card className="bg-white shadow-lg rounded-lg p-6">
                         <h2 className="text-2xl font-bold text-gray-800 mb-4">Liste des joueurs</h2>
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-                            {tournamentDetails?.joueurs.map((joueur, index) => (
+                            {sortedPlayersBySeeding?.map((joueur, index) => (
                                 <Card key={index} className="p-4 flex flex-row items-center justify-center shadow-md">
                                     <Image
                                         src={joueur.imageMain}

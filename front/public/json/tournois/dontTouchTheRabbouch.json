@@ -1,0 +1,72 @@
+{
+    "name":"Don't Touch The Rabbouch",
+    "nbJoueurs":9,
+    "date": "22/08/2024",
+    "rank":"B+",
+    "logo":"/tournoiLogoPhoto/donttouchtherabbouch.png",
+    "joueurs": [
+        {
+            "name":"Amine",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/DiddyImg.webp",
+            "seeding":2,
+            "place":"2"
+        },
+        {
+            "name":"Hugo",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":1,
+            "place":"1"
+        },
+        {
+            "name":"Bulent",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/PyraImg.webp",
+            "seeding":3,
+            "place":"3"
+        },
+        {
+            "name":"Sany",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":7,
+            "place":"7-8"
+        },
+        {
+            "name":"YanisG",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/ZSSImg.webp",
+            "seeding":6,
+            "place":"4"
+        },
+        {
+            "name":"Laurent",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/ZeldaImg.webp",
+            "seeding":6,
+            "place":"5-6"
+        },
+        {
+            "name":"Leny",
+            "team": "",
+            "imageMain": "/persoPhoto/MarioImg.webp",
+            "seeding":8,
+            "place":"7-8"
+        },
+        {
+            "name":"YanisH",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/ROBImg.webp",
+            "seeding":5,
+            "place":"5-6"
+        },
+        {
+            "name":"Darren",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/LucinaImg.webp",
+            "seeding":9,
+            "place":"9-12"
+        }
+    ]
+}

@@ -1,0 +1,289 @@
+{
+    "name":"Rabbouch Project 8",
+    "nbJoueurs":40,
+    "date": "28/04/2024",
+    "rank":"S+",
+    "logo":"/tournoiLogoPhoto/RabbouchProject8.png",
+    "joueurs": [
+        {
+            "name":"Arthur",
+            "team": "Codyssée",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":5,
+            "place":"1"
+        },
+        {
+            "name":"Hugo",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/Game&WatchImg.webp",
+            "seeding":6,
+            "place":"2"
+        },
+        {
+            "name":"Amine",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/DiddyImg.webp",
+            "seeding":3,
+            "place":"3"
+        },
+        {
+            "name":"Dalil",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":1,
+            "place":"5-6"
+        },
+        {
+            "name":"YanisG",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/ZSSImg.webp",
+            "seeding":23,
+            "place":"25-32"
+        },
+        {
+            "name":"Bulent",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/PyraImg.webp",
+            "seeding":11,
+            "place":"7-8"
+        },
+        {
+            "name":"Mohamed",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/NessImg.webp",
+            "seeding":9,
+            "place":"5-6"
+        },
+        {
+            "name":"Sany",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":38,
+            "place":"25-32"
+        },
+        {
+            "name":"Antony",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/WolfImg.webp",
+            "seeding":8,
+            "place":"7-8"
+        },
+        {
+            "name":"Laurent",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/ZeldaImg.webp",
+            "seeding":7,
+            "place":"9-12"
+        },
+        {
+            "name":"Xavier",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/IkeImg.webp",
+            "seeding":10,
+            "place":"13-16"
+        },
+        {
+            "name":"Likia",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/SoraImg.webp",
+            "seeding":12,
+            "place":"9-12"
+        },
+        {
+            "name":"Adchayan",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/NessImg.webp",
+            "seeding":24,
+            "place":"17-24"
+        },
+        {
+            "name":"Thevin",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/JokerImg.webp",
+            "seeding":21,
+            "place":"13-16"
+        },
+        {
+            "name":"AxelB",
+            "team": "ESIEE",
+            "imageMain": "/persoPhoto/BowserImg.webp",
+            "seeding":18,
+            "place":"4"
+        },
+        {
+            "name":"Guillaume",
+            "team": "ESIEE",
+            "imageMain": "/persoPhoto/PitImg.webp",
+            "seeding":2,
+            "place":"9-12"
+        },
+        {
+            "name":"Axel",
+            "team": "Codyssée",
+            "imageMain": "/persoPhoto/PacManImg.webp",
+            "seeding":13,
+            "place":"9-12"
+        },
+        {
+            "name":"Elian",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/CorrinImg.webp",
+            "seeding":20,
+            "place":"13-16"
+        },
+        {
+            "name":"Adam",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/SonicImg.webp",
+            "seeding":27,
+            "place":"13-16"
+        },
+        {
+            "name":"Allan",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/SephirothImg.webp",
+            "seeding":16,
+            "place":"17-25"
+        },
+        {
+            "name":"YanisH",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/ROBImg.webp",
+            "seeding":21,
+            "place":"17-24"
+        },
+        {
+            "name":"Alves",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/JokerImg.webp",
+            "seeding":25,
+            "place":"17-24"
+        },
+        {
+            "name":"YanisS",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/PyraImg.webp",
+            "seeding":24,
+            "place":"17-24"
+        },
+        {
+            "name":"Youness",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/PalutenaImg.webp",
+            "seeding":30,
+            "place":"17-24"
+        },
+        {
+            "name":"Carl",
+            "team": "",
+            "imageMain": "/persoPhoto/MarioImg.webp",
+            "seeding":5,
+            "place":"17-24"
+        },
+        {
+            "name":"Varshi",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/SteveImg.webp",
+            "seeding":25,
+            "place":"17-24"
+        },
+        {
+            "name":"Kabbilan",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":21,
+            "place":"25-32"
+        },
+        {
+            "name":"Yaspablo",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/FelinfernoImg.webp",
+            "seeding":34,
+            "place":"25-32"
+        },
+        {
+            "name":"Etienne",
+            "team": "ESIEE",
+            "imageMain": "/persoPhoto/JokerImg.webp",
+            "seeding":19,
+            "place":"25-32"
+        },
+        {
+            "name":"Thibault",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/ROBImg.webp",
+            "seeding":35,
+            "place":"25-32"
+        },
+        {
+            "name":"Erwann",
+            "team": "ESIEE",
+            "imageMain": "/persoPhoto/MetaknightImg.webp",
+            "seeding":28,
+            "place":"25-32"
+        },
+        {
+            "name":"Sharangan",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/MarthImg.webp",
+            "seeding":21,
+            "place":"25-32"
+        },
+        {
+            "name":"Apilash",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/PyraImg.webp",
+            "seeding":32,
+            "place":"33-40"
+        },
+        {
+            "name":"Sharaman",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/FelinfernoImg.webp",
+            "seeding":36,
+            "place":"33-40"
+        },
+        {
+            "name":"Maksen",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/KingKRoolImg.webp",
+            "seeding":37,
+            "place":"33-40"
+        },
+        {
+            "name":"Sousou",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":22,
+            "place":"33-40"
+        },
+        {
+            "name":"Darren",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/KingKRoolImg.webp",
+            "seeding":39,
+            "place":"33-40"
+        },
+        {
+            "name":"Rany",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/PitImg.webp",
+            "seeding":33,
+            "place":"33-40"
+        },
+        {
+            "name":"Ayanleh",
+            "team": "ESIEE",
+            "imageMain": "/persoPhoto/MarioImg.webp",
+            "seeding":29,
+            "place":"33-40"
+        },
+        {
+            "name":"Lounis",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/FelinfernoImg.webp",
+            "seeding":40,
+            "place":"33-40"
+        }
+    ]
+}
