@@ -9,27 +9,28 @@ import { useRouter } from "next/navigation";
 export default function Home() {
     const router = useRouter();
 
-    const handleClick = (page:string) => {
-        router.push( page)
-    }
+    const handleClick = (page: string) => {
+        router.push(page);
+    };
 
     return (
         <main className="bg-gray-100 w-full min-h-screen"> 
             <Header title={"HOMEPAGE"} />
             <div className="md:px-12 py-12">
-                <div>
-                <Card className="m-5 border-none shadow-md" style={{ gridArea: "a" }}>
+                {/* Welcome Card */}
+                <div className="mb-12">
+                    <Card className="m-5 border-none shadow-md">
                         <CardHeader>
                             <CardTitle className="MontserratSemiTitle text-center text-2xl font-bold">
-                            <p>Bienvenue sur le site du Rabbouch Project</p>
-                            <Image
-                                src={"/logoRBB.png"}
-                                alt={"logoRBB"}
-                                className="rounded-full w-32 h-32 object-cover object-top mx-auto"
-                                width={300}
-                                height={300}
-                                priority
-                            />
+                                <p>Bienvenue sur le site du Rabbouch Project</p>
+                                <Image
+                                    src={"/logoRBB.png"}
+                                    alt={"logoRBB"}
+                                    className="rounded-full w-32 h-32 object-cover object-top mx-auto"
+                                    width={300}
+                                    height={300}
+                                    priority
+                                />
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="MontserratMedium flex flex-col align-center gap-3">
@@ -40,24 +41,15 @@ export default function Home() {
                     </Card>
                 </div>
 
-                <div>
+                {/* Sliders */}
+                <div className="mb-12">
                     <Sliderss json='/json/players.json' />
                 </div>
 
-                <Card className="grid grid-cols-2 grid-rows-6 gap-4 max-w-full p-6 shadow-lg" 
-                    style={{
-                        gridTemplateAreas: `
-                          "a ."
-                          "a b"
-                          ". b"
-                          "c ."
-                          "c d"
-                          ". d"
-                          "e ."
-                          "e ."
-                        `,
-                    }}>
-                    <Card className="m-5 border-none shadow-md" style={{ gridArea: "a" }}>
+                {/* Main Content Grid - Display differently on mobile */}
+                <Card className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-6 shadow-lg">
+                    {/* Planning Card */}
+                    <Card className="border-none shadow-md">
                         <CardHeader>
                             <CardTitle className="MontserratSemiTitle text-center text-2xl font-bold"> 
                                 PLANNING
@@ -73,7 +65,8 @@ export default function Home() {
                         </CardContent>
                     </Card>
 
-                    <Card className="m-5 border-none shadow-md" style={{ gridArea: "b" }}>
+                    {/* Joueurs Card */}
+                    <Card className="border-none shadow-md">
                         <CardHeader>
                             <CardTitle className="MontserratSemiTitle text-center text-2xl font-bold">
                                 JOUEURS
@@ -81,7 +74,7 @@ export default function Home() {
                         </CardHeader>
                         <CardContent className="MontserratMedium flex flex-col align-center gap-3">
                             <div className="flex flex-row text-center">
-                                <p>Voir la liste des joueurs qui ont participé aux tournois ainsi que leurs résultats.</p>
+                                <p>Voir la liste des joueurs qui ont pu participé aux nombreux tournois ainsi que leurs différents résultats.</p>
                             </div>
                             <Button onClick={() => handleClick("/player")} className="align-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300">
                                 Voir Joueurs
@@ -89,7 +82,8 @@ export default function Home() {
                         </CardContent>
                     </Card>
 
-                    <Card className="m-5 border-none shadow-md" style={{ gridArea: "c" }}>
+                    {/* Tournois Card */}
+                    <Card className="border-none shadow-md">
                         <CardHeader>
                             <CardTitle className="MontserratSemiTitle text-center text-2xl font-bold">
                                 TOURNOIS
@@ -105,7 +99,8 @@ export default function Home() {
                         </CardContent>
                     </Card>
 
-                    <Card className="m-5 border-none shadow-md" style={{ gridArea: "d" }}>
+                    {/* Règles Card */}
+                    <Card className="border-none shadow-md">
                         <CardHeader>
                             <CardTitle className="MontserratSemiTitle text-center text-2xl font-bold">
                                 REGLES
@@ -117,22 +112,6 @@ export default function Home() {
                             </div>
                             <Button onClick={() => handleClick("/regles")} className="align-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300">
                                 Voir Règles
-                            </Button>
-                        </CardContent>
-                    </Card>
-
-                    <Card className="m-5 border-none shadow-md" style={{ gridArea: "e" }}>
-                        <CardHeader>
-                            <CardTitle className="MontserratSemiTitle text-center text-2xl font-bold">
-                                RANKING
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent className="MontserratMedium flex flex-col align-center gap-3">
-                            <div className="flex flex-row text-center">
-                                <p>Découvrer le classement des meilleurs joueurs depuis 2022.</p>
-                            </div>
-                            <Button onClick={() => handleClick("/ranking")} className="align-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300">
-                                Voir Ranking
                             </Button>
                         </CardContent>
                     </Card>
