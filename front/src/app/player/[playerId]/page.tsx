@@ -93,12 +93,12 @@ const filterMajorTournaments = (results: TournamentResult[]) => {
         : results;
 };
 
-    return (
+     return (
         <div>
             <Header title={playerDetails?.name} />
-        <div className="px-12 py-12">
+        <div className="md:px-12 py-12">
             <div className="flex flex-row justify-between mb-12">
-                <Card className="flex flex-col px-5 gap-6 shadow-lg w-1/3 py-10">
+                <Card className="flex flex-col px-5 gap-6 shadow-lg w-full md:w-1/3 py-10">
                     <div className="text-lg">
                         <b className="text-gray-700">Nom :</b> {playerDetails?.name}
                     </div>
@@ -115,27 +115,45 @@ const filterMajorTournaments = (results: TournamentResult[]) => {
                         <b className="text-gray-700">Participations :</b> {playerDetails?.results.length}
                     </div>
                 </Card>
-                <div className="w-2/3 px-5">
+                <div className="w-full md:w-2/3 px-3 md:px-5">
                     <Card className="px-5 py-3 bg-white shadow-lg rounded-lg">
-                        <div>
+                    <div>
                             <CardTitle className="flex justify-center text-2xl font-semibold text-gray-800 px-2 py-3">
                                 Mains
                             </CardTitle>
-                            <div className="flex flex-row space-x-4 justify-center">
+                            <div className="flex justify-center flex-wrap gap-6">
                                 {
-                                    playerDetails?.mains.map((character) => (
-                                        <Card key={character.id} className="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between">
-                                            <Image
-                                                src={character.image}
-                                                alt={character.name}
-                                                className="rounded-md"
-                                                width={100}
-                                                height={100}
-                                                priority
-                                            />
-                                            <div className="text-center font-medium mt-2">{character.name}</div>
-                                        </Card>
-                                    ))
+                                    playerDetails?.mains.length === 1 
+                                    ? (
+                                        <div className="flex justify-center w-full">
+                                            <Card className="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between items-center">
+                                                <Image
+                                                    src={playerDetails?.mains[0]?.image}
+                                                    alt={playerDetails?.mains[0]?.name}
+                                                    className="rounded-md"
+                                                    width={120}
+                                                    height={120}
+                                                    priority
+                                                />
+                                                <div className="text-center font-medium mt-2">{playerDetails?.mains[0]?.name}</div>
+                                            </Card>
+                                        </div>
+                                    )
+                                    : (
+                                        playerDetails?.mains.map((character) => (
+                                            <Card key={character.id} className="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between items-center">
+                                                <Image
+                                                    src={character.image}
+                                                    alt={character.name}
+                                                    className="rounded-md"
+                                                    width={120}
+                                                    height={120}
+                                                    priority
+                                                />
+                                                <div className="text-center font-medium mt-2">{character.name}</div>
+                                            </Card>
+                                        ))
+                                    )
                                 }
                             </div>
                         </div>
@@ -143,21 +161,39 @@ const filterMajorTournaments = (results: TournamentResult[]) => {
                             <CardTitle className="flex justify-center text-2xl font-semibold text-gray-800 px-2 py-3">
                                 Secondaires
                             </CardTitle>
-                            <div className="flex flex-row space-x-4 justify-center">
+                            <div className="flex justify-center flex-wrap gap-6">
                                 {
-                                    playerDetails?.secondaries.map((character) => (
-                                        <Card key={character.id} className="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between">
-                                            <Image
-                                                src={character.image}
-                                                alt={character.name}
-                                                className="rounded-md"
-                                                width={100}
-                                                height={100}
-                                                priority
-                                            />
-                                            <div className="text-center font-medium mt-2">{character.name}</div>
-                                        </Card>
-                                    ))
+                                    playerDetails?.secondaries.length === 1
+                                    ? (
+                                        <div className="flex justify-center w-full">
+                                            <Card className="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between items-center">
+                                                <Image
+                                                    src={playerDetails?.secondaries[0]?.image}
+                                                    alt={playerDetails?.secondaries[0]?.name}
+                                                    className="rounded-md"
+                                                    width={120}
+                                                    height={120}
+                                                    priority
+                                                />
+                                                <div className="text-center font-medium mt-2">{playerDetails?.secondaries[0]?.name}</div>
+                                            </Card>
+                                        </div>
+                                    )
+                                    : (
+                                        playerDetails?.secondaries.map((character) => (
+                                            <Card key={character.id} className="p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between items-center">
+                                                <Image
+                                                    src={character.image}
+                                                    alt={character.name}
+                                                    className="rounded-md"
+                                                    width={120}
+                                                    height={120}
+                                                    priority
+                                                />
+                                                <div className="text-center font-medium mt-2">{character.name}</div>
+                                            </Card>
+                                        ))
+                                    )
                                 }
                             </div>
                         </div>

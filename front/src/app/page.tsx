@@ -14,9 +14,9 @@ export default function Home() {
     }
 
     return (
-        <main className="bg-gray-100 min-h-screen"> 
+        <main className="bg-gray-100 w-full min-h-screen"> 
             <Header title={"HOMEPAGE"} />
-            <div className="px-12 py-12">
+            <div className="md:px-12 py-12">
                 <div>
                 <Card className="m-5 border-none shadow-md" style={{ gridArea: "a" }}>
                         <CardHeader>

@@ -72,7 +72,7 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
     return (
     <div>
         <Header title={tournamentDetails?.name} />
-        <div className="px-12 py-12">
+        <div className="md:px-12 py-12">
                 {/* Informations générales du tournoi */}
                 <Card className="mb-8 p-6 bg-white shadow-lg rounded-lg">
                     <div className="flex flex-col md:flex-row justify-between">

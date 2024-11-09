@@ -92,17 +92,24 @@ export default function Tournoi() {
                             <p className="text-gray-700">{tournoi.date}</p>
                         </div>
                         <div className="col-span-2">
-                            <ol className="ml-4">
-                                <li className="ml-0 font-bold text-3xl text-yellow-500">1er : {tournoi.bigThree.first}</li>
-                                <li className="ml-4 font-medium text-xl text-gray-600">2e : {tournoi.bigThree.second}</li>
-                                <li className="ml-8 text-md text-gray-500">3e : {tournoi.bigThree.third}</li>
-                            </ol>
+                        <ol className="ml-4">
+                            <li className="ml-0 font-bold text-md md:text-3xl text-yellow-500">
+                                1er : {tournoi.bigThree.first}
+                            </li>
+                            <li className="sm:ml-2 md:ml-4 font-medium text-xs md:text-xl text-gray-600">
+                                2e : {tournoi.bigThree.second}
+                            </li>
+                            <li className="sm:ml-4 md:ml-8 text-xs sm:text-base text-gray-500">
+                                3e : {tournoi.bigThree.third}
+                            </li>
+                        </ol>
+
                         </div>
                         <div className="col-span-2 flex flex-col justify-center items-center">
                             <span className="font-bold text-lg">{`${tournoi.nbJoueurs} Joueurs`}</span>
                         </div>
                         <div className="col-span-1" />
-                        <div className="col-span-1" >
+                        <div className="col-span-2" >
                         <span className={`text-gray-600 ${getCardColor(tournoi.rang)}`}>{`Rang ${tournoi.rang}`}</span>
                         </div>
                     </div>
