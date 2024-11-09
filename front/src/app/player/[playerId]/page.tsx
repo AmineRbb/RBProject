@@ -258,28 +258,3 @@ const filterMajorTournaments = (results: TournamentResult[]) => {
     </div>
     )
 }
-
-
-
-/*
-
-<div className="flex flex-row items-center justify-center m-12 space-x-8">
-                <div className="w-full flex justify-center">
-                    <div className="relative">
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 opacity-25 blur-lg"></div>
-                        <div className="relative w-full h-96 overflow-hidden">
-                            <Image
-                            src={playerDetails?.photo}
-                            alt={playerDetails?.name}
-                            className="rounded-full border-4 border-white shadow-lg"
-                            width={2000}
-                            height={500}
-                            priority
-                        />
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            
-            */
