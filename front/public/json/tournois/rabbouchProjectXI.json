@@ -27,6 +27,13 @@
             "place":""
         },
         {
+            "name":"Guillaume",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/MiiGunnerImg.webp",
+            "seeding":5,
+            "place":""
+        },
+        {
             "name":"YanisG",
             "team": "Lossa Gang",
             "imageMain": "/persoPhoto/ZSSImg.webp",
