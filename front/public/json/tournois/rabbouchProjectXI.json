@@ -1,0 +1,93 @@
+{
+    "name":"Rabbouch Project XI",
+    "nbJoueurs":16,
+    "date": "07/12/2024",
+    "rank":"A",
+    "logo":"/tournoiLogoPhoto/RabbouchProjectXI.png",
+    "joueurs": [
+        {
+            "name":"Arthur",
+            "team": "Codyssée",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":2,
+            "place":""
+        },
+        {
+            "name":"Hugo",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/Game&WatchImg.webp",
+            "seeding":1,
+            "place":""
+        },
+        {
+            "name":"Amine",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/DiddyImg.webp",
+            "seeding":4,
+            "place":""
+        },
+        {
+            "name":"YanisG",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/ZSSImg.webp",
+            "seeding":6,
+            "place":""
+        },
+        {
+            "name":"Dalil",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/SteveImg.webp",
+            "seeding":3,
+            "place":""
+        },
+        {
+            "name":"Mohamed",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/NessImg.webp",
+            "seeding":8,
+            "place":""
+        },
+        {
+            "name":"Sany",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":9,
+            "place":""
+        },
+        {
+            "name":"Antony",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/WolfImg.webp",
+            "seeding":7,
+            "place":""
+        },
+        {
+            "name":"Erwann",
+            "team": "ESIEE",
+            "imageMain": "/persoPhoto/MetaknightImg.webp",
+            "seeding":13,
+            "place":""
+        },
+        {
+            "name":"Xavier",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/IkeImg.webp",
+            "seeding":10,
+            "place":""
+        },
+        {
+            "name":"Lounis",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/FelinfernoImg.webp",
+            "seeding":11,
+            "place":""
+        },
+        {
+            "name":"Adchayan",
+            "team": "Oof Factory",
+            "imageMain": "/persoPhoto/NessImg.webp",
+            "seeding":12,
+            "place":""
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "name":"Don't Touch The Rabbouch 2",
+    "nbJoueurs":8,
+    "date": "03/11/2024",
+    "rank":"B+",
+    "logo":"/tournoiLogoPhoto/donttouchtherabbouch.png",
+    "joueurs": [
+        {
+            "name":"Amine",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/DiddyImg.webp",
+            "seeding":3,
+            "place":"3"
+        },
+        {
+            "name":"Arthur",
+            "team": "Codyssée",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":1,
+            "place":"1"
+        },
+        {
+            "name":"Guillaume",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/MiiGunnerImg.webp",
+            "seeding":4,
+            "place":"2"
+        },
+        {
+            "name":"Sany",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/CloudImg.webp",
+            "seeding":7,
+            "place":"5-6"
+        },
+        {
+            "name":"YanisG",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/ZSSImg.webp",
+            "seeding":6,
+            "place":"7-8"
+        },
+        {
+            "name":"Dalil",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/SteveImg.webp",
+            "seeding":2,
+            "place":"4"
+        },
+        {
+            "name":"Mohamed",
+            "team": "Rabbouch",
+            "imageMain": "/persoPhoto/NessImg.webp",
+            "seeding":5,
+            "place":"5-6"
+        },
+        {
+            "name":"Darren",
+            "team": "Lossa Gang",
+            "imageMain": "/persoPhoto/LucinaImg.webp",
+            "seeding":8,
+            "place":"7-8"
+        }
+    ]
+}
