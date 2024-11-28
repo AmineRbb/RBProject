@@ -16,7 +16,7 @@
         },
         {
             "id":1,
-            "nameForLink": "donttouchtherabbouch2",
+            "nameForLink": "dontTouchTheRabbouch2",
             "name":"Don't Touch The Rabbouch 2",
             "logo":"/tournoiLogoPhoto/donttouchtherabbouch.png",
             "nbJoueurs":8,
@@ -59,7 +59,7 @@
         {
             "id":3,
             "name":"LossaCup",
-            "nameForLink": "lossacup",
+            "nameForLink": "lossaCup",
             "logo":"/tournoiLogoPhoto/LossaCup.png",
             "nbJoueurs":8,
             "rang": "B",
@@ -73,7 +73,7 @@
         {
             "id":3,
             "name":"Don't Touch The Rabbouch",
-            "nameForLink": "donttouchtherabbouch",
+            "nameForLink": "dontTouchTheRabbouch",
             "logo":"/tournoiLogoPhoto/donttouchtherabbouch.png",
             "nbJoueurs":9,
             "rang": "B+",
@@ -101,7 +101,7 @@
         {
             "id":3,
             "name":"Bibi Cup 2",
-            "nameForLink": "bibicup2",
+            "nameForLink": "bibiCup2",
             "logo":"/tournoiLogoPhoto/BibiCup2.png",
             "nbJoueurs":8,
             "rang": "B",
@@ -115,7 +115,7 @@
         {
             "id":3,
             "name":"Bibi Cup",
-            "nameForLink": "bibicup",
+            "nameForLink": "bibiCup",
             "logo":"/tournoiLogoPhoto/BibiCup.png",
             "nbJoueurs":8,
             "rang": "B",
