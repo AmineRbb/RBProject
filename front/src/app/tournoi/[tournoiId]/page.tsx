@@ -16,6 +16,7 @@ type Joueur = {
 type Tournament = {
     name: string,
     nbJoueurs: number,
+    startgg: string,
     date: string,
     rank: string,
     logo: string,
@@ -76,11 +77,22 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
                 {/* Informations générales du tournoi */}
                 <Card className="mb-8 p-6 bg-white shadow-lg rounded-lg">
                     <div className="flex flex-col md:flex-row justify-between">
-                        <div className="flex flex-col gap-4 mb-6 md:mb-0 md:w-1/3">
+                        <div className="flex flex-col gap-4 mb-6 md:mb-0 md:w-2/3">
                             <div><b>Nom :</b> {tournamentDetails?.name}</div>
                             <div><b>Date :</b> {tournamentDetails?.date}</div>
                             <div><b>Rang :</b> {tournamentDetails?.rank}</div>
                             <div><b>Nombre de joueurs :</b> {tournamentDetails?.nbJoueurs}</div>
+                            <div>
+                                <b>Lien StartGG :</b> 
+                                <a 
+                                href={tournamentDetails?.startgg} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-blue-500 underline ml-2"
+                                >
+                                {tournamentDetails?.startgg}
+                                </a>
+                            </div>
                         </div>
                         {tournamentDetails?.logo && (
                             <div className="w-full md:w-1/3 flex items-center justify-center">
