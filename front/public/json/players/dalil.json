@@ -7,6 +7,13 @@
     "mains": [
         {
             "id": 1,
+            "name": "Steve",
+            "image": "/persoPhoto/SteveImg.webp"
+        }
+    ],
+    "secondaries": [
+        {
+            "id": 1,
             "name": "Cloud",
             "image": "/persoPhoto/CloudImg.webp"
         },
@@ -14,13 +21,6 @@
             "id": 1,
             "name": "KingKRool",
             "image": "/persoPhoto/KingKRoolImg.webp"
-        }
-    ],
-    "secondaries": [
-        {
-            "id": 1,
-            "name": "Steve",
-            "image": "/persoPhoto/SteveImg.webp"
         },
         {
             "id": 1,
