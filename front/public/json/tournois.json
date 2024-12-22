@@ -5,13 +5,13 @@
             "nameForLink": "rabbouchProjectXI",
             "name":"Rabbouch Project XI",
             "logo":"/tournoiLogoPhoto/RabbouchProjectXI.png",
-            "nbJoueurs":13,
+            "nbJoueurs":12,
             "rang": "A",
             "date": "07/12/2024",
             "bigThree": {
-                "first":"",
-                "second":"",
-                "third":""
+                "first":"Hugo",
+                "second":"Arthur",
+                "third":"Dalil"
             }
         },
         {
