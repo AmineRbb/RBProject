@@ -32,6 +32,17 @@
     "results":[
         {
             "id":1,
+            "name": "Rabbouch Project XI",
+            "placement":{
+                "place": "5-6",
+                "wins": ["amine", "yanisG"],
+                "lose": ["hugo", "dalilÒ"]
+            },
+            "value": "Rang A",
+            "date":"2024-12-07"
+        },
+        {
+            "id":1,
             "name": "Rabbouch Project X",
             "placement":{
                 "place": "4",

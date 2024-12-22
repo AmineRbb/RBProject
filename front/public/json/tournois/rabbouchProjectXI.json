@@ -1,6 +1,6 @@
 {
     "name":"Rabbouch Project XI",
-    "nbJoueurs":16,
+    "nbJoueurs":12,
     "date": "07/12/2024",
     "rank":"A",
     "logo":"/tournoiLogoPhoto/RabbouchProjectXI.png",
@@ -11,91 +11,84 @@
             "team": "Codyssée",
             "imageMain": "/persoPhoto/CloudImg.webp",
             "seeding":2,
-            "place":""
+            "place":"2"
         },
         {
             "name":"Hugo",
             "team": "Oof Factory",
             "imageMain": "/persoPhoto/Game&WatchImg.webp",
             "seeding":1,
-            "place":""
+            "place":"1"
         },
         {
             "name":"Amine",
             "team": "Rabbouch",
             "imageMain": "/persoPhoto/DiddyImg.webp",
             "seeding":4,
-            "place":""
+            "place":"5-6"
         },
         {
             "name":"Guillaume",
             "team": "Lossa Gang",
             "imageMain": "/persoPhoto/MiiGunnerImg.webp",
             "seeding":5,
-            "place":""
+            "place":"4"
         },
         {
             "name":"YanisG",
             "team": "Lossa Gang",
             "imageMain": "/persoPhoto/ZSSImg.webp",
             "seeding":6,
-            "place":""
+            "place":"9-12"
         },
         {
             "name":"Dalil",
             "team": "Rabbouch",
             "imageMain": "/persoPhoto/SteveImg.webp",
             "seeding":3,
-            "place":""
+            "place":"3"
         },
         {
             "name":"Mohamed",
             "team": "Rabbouch",
             "imageMain": "/persoPhoto/NessImg.webp",
             "seeding":8,
-            "place":""
+            "place":"5-6"
         },
         {
             "name":"Sany",
             "team": "Lossa Gang",
             "imageMain": "/persoPhoto/CloudImg.webp",
             "seeding":9,
-            "place":""
+            "place":"7-8"
         },
         {
             "name":"Antony",
             "team": "Oof Factory",
             "imageMain": "/persoPhoto/WolfImg.webp",
             "seeding":7,
-            "place":""
+            "place":"9-12"
         },
         {
             "name":"Erwann",
             "team": "ESIEE",
             "imageMain": "/persoPhoto/MetaknightImg.webp",
-            "seeding":13,
-            "place":""
+            "seeding":12,
+            "place":"9-12"
         },
         {
             "name":"Xavier",
             "team": "Lossa Gang",
             "imageMain": "/persoPhoto/IkeImg.webp",
             "seeding":10,
-            "place":""
+            "place":"7-8"
         },
         {
             "name":"Lounis",
             "team": "Lossa Gang",
             "imageMain": "/persoPhoto/FelinfernoImg.webp",
             "seeding":11,
-            "place":""
-        },
-        {
-            "name":"Adchayan",
-            "team": "Oof Factory",
-            "imageMain": "/persoPhoto/NessImg.webp",
-            "seeding":12,
-            "place":""
+            "place":"9-12"
         }
     ]
 }

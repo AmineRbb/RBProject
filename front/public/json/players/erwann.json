@@ -17,6 +17,17 @@
     "results":[
         {
             "id":1,
+            "name": "Rabbouch Project XI",
+            "placement":{
+                "place": "9-12",
+                "wins": [],
+                "lose": ["xavier", "antony"]
+            },
+            "value": "Rang A",
+            "date":"2024-12-07"
+        },
+        {
+            "id":1,
             "name": "Rabbouch Project X",
             "placement":{
                 "place": "17-24",
