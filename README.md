@@ -1,33 +1,36 @@
-# Rabbouch Project - Tournament Smash
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Le **Rabbouch Project** est un site web conçu pour répertorier les informations et la documentation retraçant l'historique des compétitions du **Rabbouch Project** (tournoi Smash) ainsi que les résultats des joueurs ayant participé. Ce projet a été développé avec **Next.js**, **Tailwind CSS**, et **TypeScript**.
+## Getting Started
 
-Le site permet de consulter les résultats des compétitions passées, d'afficher des informations détaillées sur les joueurs, et de visualiser des photos des événements. Les données sont stockées localement sous forme de fichiers JSON, et le backend est simplifié en utilisant uniquement ces fichiers pour stocker et servir les informations.
+First, run the development server:
 
-Le projet est hébergé sur **Vercel**.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Technologies utilisées
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- **Next.js** (Framework React)
-- **Tailwind CSS** (Framework utilitaire pour le CSS)
-- **TypeScript** (Superset de JavaScript)
-- **JSON** (pour les données statiques)
-- **Vercel** (Hébergement)
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Hébergement
+## Learn More
 
-Le site est hébergé sur **Vercel**.
+To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Notes supplémentaires
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-- Le backend est extrêmement simplifié pour ce projet. Les données sont stockées sous forme de fichiers JSON et sont directement servies depuis le frontend.
-- Il est possible d'ajouter de nouvelles compétitions ou de nouveaux joueurs en modifiant directement les fichiers JSON dans le répertoire `data/`.
-- Le projet peut évoluer pour intégrer un backend plus complexe si nécessaire.
+## Deploy on Vercel
 
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-
-## Contact
-
-Pour toute question ou suggestion, n'hésitez pas à me contacter via GitHub ou à ouvrir une *issue*.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

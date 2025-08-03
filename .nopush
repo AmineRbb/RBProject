@@ -1,0 +1,12 @@
+ATTENTION - NE PAS PUSH CE PROJET
+=====================================
+
+Ce fichier indique que le projet a été modifié par un agent IA et ne doit PAS être pushé vers un repository distant.
+
+Pour débloquer et permettre les push :
+1. Supprimer ce fichier (.nopush)
+2. Supprimer les lignes de protection dans .gitignore (section "PROTECTION ANTI-PUSH")
+3. Vérifier manuellement toutes les modifications avant de commit/push
+
+Date de protection : $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
+Raison : Suppression de Prisma + Protection anti-push automatique 
