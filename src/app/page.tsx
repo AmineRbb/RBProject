@@ -57,7 +57,7 @@ export default function Home() {
                         </CardHeader>
                         <CardContent className="MontserratMedium flex flex-col align-center gap-3">
                             <div className="flex flex-row text-center">
-                                <p>Découvrer le calendrier des prochains tournois de Smash Bros Ultimate de la saison du Rabbouch Project.</p>
+                                <p>Découvrir le calendrier des prochains tournois de Smash Bros Ultimate de la saison du Rabbouch Project.</p>
                             </div>
                             <Button onClick={() => handleClick("/tournoi")} className="flex align-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300"> 
                                 Voir Planning

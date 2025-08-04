@@ -25,17 +25,23 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
   return (
     <html lang="fr">
       <body className={inter.className}>
-        <div className="flex flex-col md:flex-row h-screen w-full">
-          <div className="w-full md:w-1/4">
+        <div className="min-h-screen flex flex-col">
+          <div className="md:hidden">
             <SideBar />
           </div>
-          <div className="flex flex-col flex-grow w-full md:w-3/4">
-            <div className="flex-grow bg-gray-100">
-              {children}
+          
+          <div className="flex flex-1">
+            <div className="hidden md:block md:w-1/4">
+              <SideBar />
             </div>
-            <footer className="mt-auto">
+            
+            <main className="flex-1 flex flex-col w-full md:w-3/4">
+              <div className="flex-1 bg-gray-100 pt-16 md:pt-0">
+                {children}
+              </div>
+              
               <Footer />
-            </footer>
+            </main>
           </div>
         </div>
         <Analytics />

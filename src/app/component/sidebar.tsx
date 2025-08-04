@@ -17,58 +17,125 @@ export default function SideBar() {
     };
 
     return (
-        <div className="fixed top-0 left-0 md:h-screen w-full md:w-1/4 shadow-md flex flex-col bg-white z-10">
-            <div className="flex flex-col items-center gap-6 md:px-4 pt-8 md:py-8 sticky">
-                {/* Logo visible uniquement sur les grands écrans (lg) */}
-                <div className="hidden md:flex flex-row space-x-4 mb-6">
+        <>
+            <div className="hidden md:flex md:flex-col md:h-screen w-full bg-white border-r border-gray-200 shadow-sm">
+                <div className="flex flex-col items-center gap-6 px-4 py-8">
+                    <div className="flex flex-row space-x-4 mb-6">
+                        <Image
+                            src="/logoRBB.png"
+                            alt="Logo RBB"
+                            className="rounded-lg"
+                            width={100}
+                            height={100}
+                            priority
+                        />
+                    </div>
+
+                    <nav className="flex flex-col items-center space-y-2 w-full">
+                        <Button 
+                            variant="ghost" 
+                            className="w-full justify-center text-left p-3 flex flex-row" 
+                            onClick={() => handlePage('')}
+                        >
+                            <HomeIcon className="mr-3 h-5 w-5" />
+                            Homepage
+                        </Button>
+                        <Button 
+                            variant="ghost" 
+                            className="w-full justify-center text-left p-3 flex flex-row" 
+                            onClick={() => handlePage('tournoi')}
+                        >
+                            <StarIcon className="mr-3 h-5 w-5" />
+                            Tournois
+                        </Button>
+                        <Button 
+                            variant="ghost" 
+                            className="w-full justify-center text-left p-3 flex flex-row" 
+                            onClick={() => handlePage('player')}
+                        >
+                            <PersonIcon className="mr-3 h-5 w-5" />
+                            Joueurs
+                        </Button>
+                        <Button 
+                            variant="ghost" 
+                            className="w-full justify-center text-left p-3 flex flex-row" 
+                            onClick={() => handlePage('teams')}
+                        >
+                            <GroupsIcon className="mr-3 h-5 w-5" />
+                            Teams
+                        </Button>
+                        <Button 
+                            variant="ghost" 
+                            className="w-full justify-center text-left p-3 flex flex-row" 
+                            onClick={() => handlePage('regles')}
+                        >
+                            <DescriptionIcon className="mr-3 h-5 w-5" />
+                            Règles
+                        </Button>
+                    </nav>
+                </div>
+            </div>
+
+            <div className="md:hidden fixed top-0 left-0 right-0 bg-white border-b border-gray-200 shadow-sm z-50">
+                <div className="flex justify-between items-center p-4">
                     <Image
                         src="/logoRBB.png"
                         alt="Logo RBB"
-                        className="dark:invert"
-                        width={100}
-                        height={100}
+                        className="rounded-lg"
+                        width={40}
+                        height={40}
                         priority
                     />
-                </div>
-
-                {/* Texte avec icônes visible uniquement sur les grands écrans (md) */}
-                <div className="hidden md:flex flex-col items-center space-y-4">
-                    <Button variant="ghost" className="text-center" onClick={() => handlePage('')}>
-                        <HomeIcon /> Homepage
-                    </Button>
-                    <Button variant="ghost" className="text-center" onClick={() => handlePage('tournoi')}>
-                        <StarIcon /> Tournois
-                    </Button>
-                    <Button variant="ghost" className="text-center" onClick={() => handlePage('player')}>
-                        <PersonIcon /> Joueurs
-                    </Button>
-                    <Button variant="ghost" className="text-center" onClick={() => handlePage('teams')}>
-                        <GroupsIcon /> Teams
-                    </Button>
-                    <Button variant="ghost" className="text-center" onClick={() => handlePage('regles')}>
-                        <DescriptionIcon /> Règles
-                    </Button>
-                </div>
-
-                {/* Icônes visibles uniquement sur les petits écrans (sm) */}
-                <div className="md:hidden flex flex-row justify-evenly mt-6 py-2">
-                    <Button variant="ghost" className="flex flex-col text-xs px-2" onClick={() => handlePage('')}>
-                        <HomeIcon /> Homepage
-                    </Button>
-                    <Button variant="ghost" className="flex flex-col text-xs px-2" onClick={() => handlePage('tournoi')}>
-                        <StarIcon /> Tournois
-                    </Button>
-                    <Button variant="ghost" className="flex flex-col text-xs px-2" onClick={() => handlePage('player')}>
-                        <PersonIcon /> Joueurs
-                    </Button>
-                    <Button variant="ghost" className="flex flex-col text-xs px-2" onClick={() => handlePage('teams')}>
-                        <GroupsIcon /> Teams
-                    </Button>
-                    <Button variant="ghost" className="flex flex-col text-xs px-2" onClick={() => handlePage('regles')}>
-                        <DescriptionIcon /> Règles
-                    </Button>
+                    
+                    <div className="flex space-x-1">
+                        <Button 
+                            variant="ghost" 
+                            size="sm" 
+                            className="flex flex-col items-center p-2" 
+                            onClick={() => handlePage('')}
+                        >
+                            <HomeIcon className="h-4 w-4" />
+                            <span className="text-xs mt-1">Home</span>
+                        </Button>
+                        <Button 
+                            variant="ghost" 
+                            size="sm" 
+                            className="flex flex-col items-center p-2" 
+                            onClick={() => handlePage('tournoi')}
+                        >
+                            <StarIcon className="h-4 w-4" />
+                            <span className="text-xs mt-1">Tournois</span>
+                        </Button>
+                        <Button 
+                            variant="ghost" 
+                            size="sm" 
+                            className="flex flex-col items-center p-2" 
+                            onClick={() => handlePage('player')}
+                        >
+                            <PersonIcon className="h-4 w-4" />
+                            <span className="text-xs mt-1">Joueurs</span>
+                        </Button>
+                        <Button 
+                            variant="ghost" 
+                            size="sm" 
+                            className="flex flex-col items-center p-2" 
+                            onClick={() => handlePage('teams')}
+                        >
+                            <GroupsIcon className="h-4 w-4" />
+                            <span className="text-xs mt-1">Teams</span>
+                        </Button>
+                        <Button 
+                            variant="ghost" 
+                            size="sm" 
+                            className="flex flex-col items-center p-2" 
+                            onClick={() => handlePage('regles')}
+                        >
+                            <DescriptionIcon className="h-4 w-4" />
+                            <span className="text-xs mt-1">Règles</span>
+                        </Button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }

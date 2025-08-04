@@ -171,7 +171,7 @@ export default function PagePlayer() {
             <div className="px-4 py-4 gap-4 space-y-4">
                 <Card className="px-4 py-4 gap-4 space-y-4">
                     <CardTitle className="flex justify-center">
-                        Choissisez un mode de recherche
+                        Choisissez un mode de recherche
                     </CardTitle>
                     <div className="flex flex-rows-1 justify-center gap-2">
                         {["default", "team", "rank", "tier"].map((option) => (
