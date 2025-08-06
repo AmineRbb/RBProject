@@ -90,7 +90,6 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
     <div className="min-h-screen bg-gray-100">
         <Header title={tournamentDetails?.name} />
         <div className="px-6 py-8">
-                {/* Informations générales du tournoi */}
                 <Card className="mb-8 p-8 bg-white shadow-lg rounded-lg">
                     <div className="flex flex-col md:flex-row justify-between">
                         <div className="flex flex-col gap-6 mb-8 md:mb-0 md:w-2/3">
@@ -118,7 +117,6 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
                     </div>
                 </Card>
 
-                {/* Grille des joueurs */}
                 <div className="mt-8">
                     <Card className="bg-white shadow-lg rounded-lg p-8">
                         <h2 className="text-2xl font-bold text-gray-800 mb-6">Liste des joueurs</h2>
@@ -142,7 +140,6 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
                     </Card>
                 </div>
 
-                {/* Tableau du classement final */}
                 <div className="mt-8">
                     <Card className="p-8 bg-white shadow-lg rounded-lg">
                         <h2 className="text-2xl font-bold text-gray-800 mb-6">Classement Final</h2>
