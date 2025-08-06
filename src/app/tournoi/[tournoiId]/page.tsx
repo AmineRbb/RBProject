@@ -26,22 +26,25 @@ type Tournament = {
 export default function TournoiId({ params }: { params: { tournoiId: string }}) {
 
     const [tournamentDetails, setTournamentDetails] = useState<Tournament>();
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        const fetchPlayerData = async () => {
+        const fetchTournamentData = async () => {
             try {
                 const res = await fetch(`/json/tournois/${params.tournoiId}.json`);
                 if (!res.ok) {
-                    throw new Error("Joueur non trouvé");
+                    throw new Error(`Impossible de charger les données du tournoi: ${res.status}`);
                 }
                 const data = await res.json();
                 setTournamentDetails(data);
+                setError(null);
             } catch (error) {
-                console.error("Erreur lors de la récupération des données :", error);
+                setError('Impossible de charger les informations de ce tournoi');
+                setTournamentDetails(undefined);
             }
         };
     
-        fetchPlayerData(); // Appelle la fonction pour récupérer les données
+        fetchTournamentData();
     }, [params.tournoiId]); 
     
     const groupedPlayers = tournamentDetails?.joueurs.reduce((acc, joueur) => {
@@ -70,14 +73,27 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
 
     const sortedPlayersBySeeding = tournamentDetails?.joueurs.sort((a, b) => a.seeding - b.seeding);
 
+    if (error) {
+        return (
+            <div className="min-h-screen bg-gray-100">
+                <Header title="Tournoi non trouvé" />
+                <div className="px-6 py-8">
+                    <Card className="p-8 text-center">
+                        <p className="text-lg text-red-600">{error}</p>
+                    </Card>
+                </div>
+            </div>
+        );
+    }
+
     return (
-    <div>
+    <div className="min-h-screen bg-gray-100">
         <Header title={tournamentDetails?.name} />
-        <div className="md:px-12 py-12">
+        <div className="px-6 py-8">
                 {/* Informations générales du tournoi */}
-                <Card className="mb-8 p-6 bg-white shadow-lg rounded-lg">
+                <Card className="mb-8 p-8 bg-white shadow-lg rounded-lg">
                     <div className="flex flex-col md:flex-row justify-between">
-                        <div className="flex flex-col gap-4 mb-6 md:mb-0 md:w-2/3">
+                        <div className="flex flex-col gap-6 mb-8 md:mb-0 md:w-2/3">
                             <div><b>Nom :</b> {tournamentDetails?.name}</div>
                             <div><b>Date :</b> {tournamentDetails?.date}</div>
                             <div><b>Rang :</b> {tournamentDetails?.rank}</div>
@@ -104,11 +120,11 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
 
                 {/* Grille des joueurs */}
                 <div className="mt-8">
-                    <Card className="bg-white shadow-lg rounded-lg p-6">
-                        <h2 className="text-2xl font-bold text-gray-800 mb-4">Liste des joueurs</h2>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+                    <Card className="bg-white shadow-lg rounded-lg p-8">
+                        <h2 className="text-2xl font-bold text-gray-800 mb-6">Liste des joueurs</h2>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-6">
                             {sortedPlayersBySeeding?.map((joueur, index) => (
-                                <Card key={index} className="p-4 flex flex-row items-center justify-center shadow-md">
+                                <Card key={index} className="p-6 flex flex-row items-center justify-center shadow-md">
                                     <Image
                                         src={joueur.imageMain}
                                         alt={joueur.name}
@@ -126,31 +142,28 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
                     </Card>
                 </div>
 
-
-
                 {/* Tableau du classement final */}
                 <div className="mt-8">
-                    <Card className="p-6 bg-white shadow-lg rounded-lg">
-                        <h2 className="text-2xl font-bold text-gray-800 mb-4">Classement Final</h2>
+                    <Card className="p-8 bg-white shadow-lg rounded-lg">
+                        <h2 className="text-2xl font-bold text-gray-800 mb-6">Classement Final</h2>
                         <Table className="w-full">
                             <TableHeader>
                                 <TableRow className="bg-gray-200">
-                                    <TableHead className="py-3 px-4 text-left">Place</TableHead>
-                                    <TableHead className="py-3 px-4 text-left">Nom des joueurs</TableHead>
-                                    <TableHead className="py-3 px-4 text-left">Équipe</TableHead>
+                                    <TableHead className="py-4 px-6 text-left">Place</TableHead>
+                                    <TableHead className="py-4 px-6 text-left">Nom des joueurs</TableHead>
+                                    <TableHead className="py-4 px-6 text-left">Équipe</TableHead>
                                 </TableRow>
                             </TableHeader>
                             <TableBody>
                                 {Object.keys(groupedPlayers || {})
-                                    .sort((a, b) => parseInt(a) - parseInt(b)) // Tri des groupes de classement par place
+                                    .sort((a, b) => parseInt(a) - parseInt(b))
                                     .map((place) => (
                                         groupedPlayers?.[place].map((joueur, jIndex) => (
                                             <TableRow key={`${place}-${jIndex}`} className={`hover:bg-gray-100 transition-colors ${getColorForPlacement(place)}`}>
-                                                {/* Affiche la place une seule fois pour chaque groupe */}
-                                                <TableCell className="py-3 px-4 font-semibold">
+                                                <TableCell className="py-4 px-6 font-semibold">
                                                     {jIndex === 0 ? place : ""}
                                                 </TableCell>
-                                                <TableCell className="py-3 px-4 flex items-center space-x-3">
+                                                <TableCell className="py-4 px-6 flex items-center space-x-4">
                                                     <Image
                                                         src={joueur.imageMain}
                                                         alt={joueur.name}
@@ -160,7 +173,7 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
                                                     />
                                                     <span>{joueur.name}</span>
                                                 </TableCell>
-                                                <TableCell className="py-3 px-4">{joueur.team}</TableCell>
+                                                <TableCell className="py-4 px-6">{joueur.team}</TableCell>
                                             </TableRow>
                                         ))
                                     ))}

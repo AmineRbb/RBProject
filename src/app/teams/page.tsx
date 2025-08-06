@@ -45,29 +45,30 @@ type TeamsList = {
 
 export default function Teams() {
   const [teamList, setTeamList] = useState<TeamsList | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchTeamsData = async () => {
       try {
         const res = await fetch('/json/teams.json');
         if (!res.ok) {
-          throw new Error('Failed to fetch teams data');
+          throw new Error(`Impossible de charger les équipes: ${res.status}`);
         }
         const data = await res.json();
         setTeamList(data);
+        setError(null);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        setError('Impossible de charger la liste des équipes');
+        setTeamList(null);
       }
     };
-    fetchData();
+    fetchTeamsData();
   }, []);
-
 
   const renderTeamCard = (team: TeamsData) => {
     return (
-      
-        <Card className="p-6 m-4 max-w-3xl mx-auto rounded-3xl shadow-lg bg-white transition-all hover:shadow-2xl">
-        <div className="grid grid-cols-6 gap-4 items-center">
+      <Card className="p-8 mx-4 max-w-4xl rounded-3xl shadow-lg bg-white transition-all hover:shadow-2xl">
+        <div className="grid grid-cols-6 gap-6 items-center">
           <div className="col-span-1">
             <Image
               src={team.imageTeam}
@@ -82,7 +83,7 @@ export default function Teams() {
             <h2 className="text-3xl font-bold text-gray-800">{team.name}</h2>
             <p className="text-gray-600 mt-2">{`${team.nbJoueurs} joueurs`}</p>
           </div>
-          <div className="col-span-6 mt-6">
+          <div className="col-span-6 mt-8">
             <Carousel
               arrows={false}
               responsive={responsive}
@@ -93,8 +94,8 @@ export default function Teams() {
               customTransition="transform 0.5s ease-in-out"
             >
               {team.joueurs.map((joueur) => (
-                <div key={joueur.name} className="p-2">
-                  <Card className="p-4 bg-gray-50 rounded-xl shadow-lg flex flex-col items-center transition-all transform hover:scale-105">
+                <div key={joueur.name} className="p-3">
+                  <Card className="p-6 bg-gray-50 rounded-xl shadow-lg flex flex-col items-center transition-all transform hover:scale-105">
                     <Image
                       src={joueur.image}
                       alt={joueur.name}
@@ -103,7 +104,7 @@ export default function Teams() {
                       height={150}
                       priority
                     />
-                    <CardContent className="mt-3 text-center">
+                    <CardContent className="mt-4 text-center">
                       <CardTitle className="font-semibold text-xl text-gray-800">
                         {joueur.name}
                       </CardTitle>
@@ -115,22 +116,35 @@ export default function Teams() {
           </div>
         </div>
       </Card>
-      
     );
   };
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-100">
+        <Header title="TEAMS" />
+        <div className="px-6 py-8">
+          <Card className="p-8 text-center">
+            <p className="text-lg text-red-600">{error}</p>
+          </Card>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-100">
       <Header title="TEAMS" />
-      <div className="px-4 py-6">
-        <Card className="px-4 py-6 mb-6 bg-white shadow-lg rounded-lg">
+      <div className="px-6 py-8">
+        <Card className="p-6 mb-8 bg-white shadow-lg rounded-lg">
           <CardTitle className="flex justify-center text-2xl font-semibold">
             Découvrez les structures de joueurs concourant dans les différents tournois
           </CardTitle>
         </Card>
-      </div>
-      <div className="flex flex-col items-center space-y-6">
-        {teamList?.teams.map((team) => renderTeamCard(team))}
+        
+        <div className="flex flex-col items-center space-y-8">
+          {teamList?.teams.map((team) => renderTeamCard(team))}
+        </div>
       </div>
     </div>
   );

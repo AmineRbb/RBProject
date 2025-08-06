@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "./component/header";
-import Sliderss from "./component/Slider";
+import PlayerCarousel from "./component/Slider";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -16,10 +16,10 @@ export default function Home() {
     return (
         <main className="bg-gray-100 w-full min-h-screen"> 
             <Header title={"HOMEPAGE"} />
-            <div className="md:px-12 py-12">
+            <div className="px-6 py-8">
                 {/* Welcome Card */}
-                <div className="mb-12">
-                    <Card className="m-5 border-none shadow-md">
+                <div className="mb-8">
+                    <Card className="mx-4 border-none shadow-md">
                         <CardHeader>
                             <CardTitle className="MontserratSemiTitle text-center text-2xl font-bold">
                                 <p>Bienvenue sur le site du Rabbouch Project</p>
@@ -33,21 +33,21 @@ export default function Home() {
                                 />
                             </CardTitle>
                         </CardHeader>
-                        <CardContent className="MontserratMedium flex flex-col align-center gap-3">
-                            <div className="flex flex-row text-center">
-                                <p>Votre référence pour suivre l&apos;actualité des tournois de Smash Bros Ultimate, découvrir le calendrier des événements à venir, et explorer les classements et performances des meilleurs joueurs.</p>
-                            </div>
+                        <CardContent className="MontserratMedium flex flex-col items-center gap-4">
+                            <p className="text-center">
+                                Votre référence pour suivre l&apos;actualité des tournois de Smash Bros Ultimate, découvrir le calendrier des événements à venir, et explorer les classements et performances des meilleurs joueurs.
+                            </p>
                         </CardContent>
                     </Card>
                 </div>
 
-                {/* Sliders */}
-                <div className="mb-12">
-                    <Sliderss json='/json/players.json' />
+                {/* Player Carousel */}
+                <div className="mb-8">
+                    <PlayerCarousel dataUrl='/json/players.json' />
                 </div>
 
-                {/* Main Content Grid - Display differently on mobile */}
-                <Card className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-6 shadow-lg">
+                {/* Main Content Grid */}
+                <Card className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 shadow-lg">
                     {/* Planning Card */}
                     <Card className="border-none shadow-md">
                         <CardHeader>
@@ -55,11 +55,11 @@ export default function Home() {
                                 PLANNING
                             </CardTitle>
                         </CardHeader>
-                        <CardContent className="MontserratMedium flex flex-col align-center gap-3">
-                            <div className="flex flex-row text-center">
-                                <p>Découvrir le calendrier des prochains tournois de Smash Bros Ultimate de la saison du Rabbouch Project.</p>
-                            </div>
-                            <Button onClick={() => handleClick("/tournoi")} className="flex align-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300"> 
+                        <CardContent className="MontserratMedium flex flex-col items-center gap-4">
+                            <p className="text-center">
+                                Découvrir le calendrier des prochains tournois de Smash Bros Ultimate de la saison du Rabbouch Project.
+                            </p>
+                            <Button onClick={() => handleClick("/tournoi")} className="bg-blue-600 text-white hover:bg-blue-700 transition duration-300"> 
                                 Voir Planning
                             </Button>
                         </CardContent>
@@ -72,11 +72,11 @@ export default function Home() {
                                 JOUEURS
                             </CardTitle>
                         </CardHeader>
-                        <CardContent className="MontserratMedium flex flex-col align-center gap-3">
-                            <div className="flex flex-row text-center">
-                                <p>Voir la liste des joueurs qui ont pu participé aux nombreux tournois ainsi que leurs différents résultats.</p>
-                            </div>
-                            <Button onClick={() => handleClick("/player")} className="align-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300">
+                        <CardContent className="MontserratMedium flex flex-col items-center gap-4">
+                            <p className="text-center">
+                                Voir la liste des joueurs qui ont pu participé aux nombreux tournois ainsi que leurs différents résultats.
+                            </p>
+                            <Button onClick={() => handleClick("/player")} className="bg-blue-600 text-white hover:bg-blue-700 transition duration-300">
                                 Voir Joueurs
                             </Button>
                         </CardContent>
@@ -89,11 +89,11 @@ export default function Home() {
                                 TOURNOIS
                             </CardTitle>
                         </CardHeader>
-                        <CardContent className="MontserratMedium flex flex-col align-center gap-3">
-                            <div className="flex flex-row text-center">
-                                <p>La liste des tournois ayant eu lieu depuis le 27 décembre 2022.</p>
-                            </div>
-                            <Button onClick={() => handleClick("/tournoi")} className="align-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300">
+                        <CardContent className="MontserratMedium flex flex-col items-center gap-4">
+                            <p className="text-center">
+                                La liste des tournois ayant eu lieu depuis le 27 décembre 2022.
+                            </p>
+                            <Button onClick={() => handleClick("/tournoi")} className="bg-blue-600 text-white hover:bg-blue-700 transition duration-300">
                                 Voir Tournois
                             </Button>
                         </CardContent>
@@ -106,11 +106,11 @@ export default function Home() {
                                 REGLES
                             </CardTitle>
                         </CardHeader>
-                        <CardContent className="MontserratMedium flex flex-col align-center gap-3">
-                            <div className="flex flex-row text-center">
-                                <p>Voir les règles des tournois : choix des maps, personnages...</p>
-                            </div>
-                            <Button onClick={() => handleClick("/regles")} className="align-center bg-blue-600 text-white hover:bg-blue-700 transition duration-300">
+                        <CardContent className="MontserratMedium flex flex-col items-center gap-4">
+                            <p className="text-center">
+                                Voir les règles des tournois : choix des maps, personnages...
+                            </p>
+                            <Button onClick={() => handleClick("/regles")} className="bg-blue-600 text-white hover:bg-blue-700 transition duration-300">
                                 Voir Règles
                             </Button>
                         </CardContent>

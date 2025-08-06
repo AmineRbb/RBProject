@@ -1,5 +1,4 @@
 'use client';
-// app/component/sidebar.tsx
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -19,7 +18,7 @@ export default function SideBar() {
     return (
         <>
             <div className="hidden md:flex md:flex-col md:h-screen w-full bg-white border-r border-gray-200 shadow-sm">
-                <div className="flex flex-col items-center gap-6 px-4 py-8">
+                <div className="flex flex-col items-center gap-6 px-6 py-8">
                     <div className="flex flex-row space-x-4 mb-6">
                         <Image
                             src="/logoRBB.png"
@@ -31,10 +30,10 @@ export default function SideBar() {
                         />
                     </div>
 
-                    <nav className="flex flex-col items-center space-y-2 w-full">
+                    <nav className="flex flex-col items-center space-y-3 w-full">
                         <Button 
                             variant="ghost" 
-                            className="w-full justify-center text-left p-3 flex flex-row" 
+                            className="w-full justify-start p-4 h-auto" 
                             onClick={() => handlePage('')}
                         >
                             <HomeIcon className="mr-3 h-5 w-5" />
@@ -42,7 +41,7 @@ export default function SideBar() {
                         </Button>
                         <Button 
                             variant="ghost" 
-                            className="w-full justify-center text-left p-3 flex flex-row" 
+                            className="w-full justify-start p-4 h-auto" 
                             onClick={() => handlePage('tournoi')}
                         >
                             <StarIcon className="mr-3 h-5 w-5" />
@@ -50,7 +49,7 @@ export default function SideBar() {
                         </Button>
                         <Button 
                             variant="ghost" 
-                            className="w-full justify-center text-left p-3 flex flex-row" 
+                            className="w-full justify-start p-4 h-auto" 
                             onClick={() => handlePage('player')}
                         >
                             <PersonIcon className="mr-3 h-5 w-5" />
@@ -58,7 +57,7 @@ export default function SideBar() {
                         </Button>
                         <Button 
                             variant="ghost" 
-                            className="w-full justify-center text-left p-3 flex flex-row" 
+                            className="w-full justify-start p-4 h-auto" 
                             onClick={() => handlePage('teams')}
                         >
                             <GroupsIcon className="mr-3 h-5 w-5" />
@@ -66,7 +65,7 @@ export default function SideBar() {
                         </Button>
                         <Button 
                             variant="ghost" 
-                            className="w-full justify-center text-left p-3 flex flex-row" 
+                            className="w-full justify-start p-4 h-auto" 
                             onClick={() => handlePage('regles')}
                         >
                             <DescriptionIcon className="mr-3 h-5 w-5" />
@@ -87,11 +86,11 @@ export default function SideBar() {
                         priority
                     />
                     
-                    <div className="flex space-x-1">
+                    <div className="flex space-x-2">
                         <Button 
                             variant="ghost" 
                             size="sm" 
-                            className="flex flex-col items-center p-2" 
+                            className="flex flex-col items-center p-3 min-w-[60px]" 
                             onClick={() => handlePage('')}
                         >
                             <HomeIcon className="h-4 w-4" />
@@ -100,7 +99,7 @@ export default function SideBar() {
                         <Button 
                             variant="ghost" 
                             size="sm" 
-                            className="flex flex-col items-center p-2" 
+                            className="flex flex-col items-center p-3 min-w-[60px]" 
                             onClick={() => handlePage('tournoi')}
                         >
                             <StarIcon className="h-4 w-4" />
@@ -109,7 +108,7 @@ export default function SideBar() {
                         <Button 
                             variant="ghost" 
                             size="sm" 
-                            className="flex flex-col items-center p-2" 
+                            className="flex flex-col items-center p-3 min-w-[60px]" 
                             onClick={() => handlePage('player')}
                         >
                             <PersonIcon className="h-4 w-4" />
@@ -118,7 +117,7 @@ export default function SideBar() {
                         <Button 
                             variant="ghost" 
                             size="sm" 
-                            className="flex flex-col items-center p-2" 
+                            className="flex flex-col items-center p-3 min-w-[60px]" 
                             onClick={() => handlePage('teams')}
                         >
                             <GroupsIcon className="h-4 w-4" />
@@ -127,7 +126,7 @@ export default function SideBar() {
                         <Button 
                             variant="ghost" 
                             size="sm" 
-                            className="flex flex-col items-center p-2" 
+                            className="flex flex-col items-center p-3 min-w-[60px]" 
                             onClick={() => handlePage('regles')}
                         >
                             <DescriptionIcon className="h-4 w-4" />

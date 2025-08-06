@@ -30,23 +30,25 @@ export default function Tournoi() {
     const router = useRouter();
 
     const [tournoiList, setTournoiList] = useState<TournoiList>();
-    //const [search, setSearch] = useState<searchList>("default");
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchTournamentsData = async () => {
             try {
                 const resTournois = await fetch(`/json/tournois.json`);
                 if(!resTournois.ok){
-                    throw new Error("Joueur non trouvé");
+                    throw new Error(`Impossible de charger les tournois: ${resTournois.status}`);
                 }
                 const dataTournois = await resTournois.json();
                 setTournoiList(dataTournois);
+                setError(null);
             } catch (error) {
-                console.error("Erreur lors de la récupération des données : ", error)
+                setError('Impossible de charger la liste des tournois');
+                setTournoiList(undefined);
             }
         } 
         
-        fetchData();
+        fetchTournamentsData();
     }, [])
 
     const handleClick = (page:string) => {
@@ -58,24 +60,24 @@ export default function Tournoi() {
             case "S":
             case "S+":
             case "S-":
-                return "border border-yellow-500 bg-yellow-100 text-yellow-600 px-2 py-1 rounded-md"; // Couleur pour le rang S
+                return "border border-yellow-500 bg-yellow-100 text-yellow-600 px-2 py-1 rounded-md";
             case "A":
             case "A-":
             case "A+":
-                return "border border-red-500 bg-red-100 text-red-600 px-2 py-1 rounded-md"; // Couleur pour le rang A
+                return "border border-red-500 bg-red-100 text-red-600 px-2 py-1 rounded-md";
             case "B":
             case "B-":
             case "B+":
-                return "border border-blue-500 bg-blue-100 text-blue-600 px-2 py-1 rounded-md"; // Couleur pour le rang B
+                return "border border-blue-500 bg-blue-100 text-blue-600 px-2 py-1 rounded-md";
             default:
-                return "border border-red-500 bg-red-100 text-red-600 px-2 py-1 rounded-md"; // Couleur par défaut
+                return "border border-red-500 bg-red-100 text-red-600 px-2 py-1 rounded-md";
         }
     }
 
     const renderTournamentCard = (tournoi:TournoiData) => {
         return(
             <button onClick={() => handleClick(tournoi.nameForLink)} key={tournoi.id} className="w-full transform transition-transform duration-300 hover:scale-105">
-                <Card className={`p-6 m-4 max-w-3xl mx-auto rounded-xl shadow-md`}>
+                <Card className={`p-6 max-w-3xl mx-auto rounded-xl shadow-md`}>
                     <div className="grid grid-cols-6 gap-4">
                         <div className="col-span-1">
                             <Image
@@ -118,18 +120,32 @@ export default function Tournoi() {
         )
     }
 
+    if (error) {
+        return (
+            <div className="min-h-screen bg-gray-100">
+                <Header title={"TOURNOIS"} />
+                <div className="px-6 py-8">
+                    <Card className="p-8 text-center">
+                        <p className="text-lg text-red-600">{error}</p>
+                    </Card>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="min-h-screen bg-gray-100">
             <Header title={"TOURNOIS"} />
-            <div className="px-4 py-6">
-                <Card className="px-4 py-6 mb-6">
+            <div className="px-6 py-8">
+                <Card className="p-6 mb-8">
                     <CardTitle className="flex justify-center text-2xl font-semibold">
                         Découvrez les tournois ayant eu lieu ou ayant prochainement lieu
                     </CardTitle>
                 </Card>
-            </div>
-            <div className="flex flex-col items-center space-y-6">
-                {tournoiList?.tournois.map((tournoi) => renderTournamentCard(tournoi))}
+                
+                <div className="flex flex-col items-center space-y-6">
+                    {tournoiList?.tournois.map((tournoi) => renderTournamentCard(tournoi))}
+                </div>
             </div>
         </div>
     )

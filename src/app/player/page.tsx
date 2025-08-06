@@ -6,8 +6,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Header from "../component/header";
 
-
-
 type PlayerList = {
     players:PlayerData[]
 }
@@ -32,22 +30,25 @@ export default function PagePlayer() {
 
     const [playerList, setPlayerList] = useState<PlayerList>();
     const [search, setSearch] = useState<searchList>("default");
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchPlayersData = async () => {
             try {
                 const resPlayers = await fetch(`/json/players.json`);
                 if(!resPlayers.ok){
-                    throw new Error("Joueur non trouvé");
+                    throw new Error(`Impossible de charger les joueurs: ${resPlayers.status}`);
                 }
                 const dataPlayers = await resPlayers.json();
                 setPlayerList(dataPlayers);
+                setError(null);
             } catch (error) {
-                console.error("Erreur lors de la récupération des données : ", error)
+                setError('Impossible de charger la liste des joueurs');
+                setPlayerList(undefined);
             }
         } 
         
-        fetchData();
+        fetchPlayersData();
     }, [])
 
     const handleClick = (page:string) => {
@@ -55,8 +56,8 @@ export default function PagePlayer() {
     }
 
     const renderPlayerCard = (player: PlayerData, extraInfo?: string) => (
-        <button key={player.name} onClick={() => handleClick(player.name)} className="hover:shadow-lg transition-shadow duration-300  transform transition-transform duration-300 hover:scale-105">
-            <Card className="p-2 bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
+        <button key={player.name} onClick={() => handleClick(player.name)} className="hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+            <Card className="p-4 bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
                 <Image
                     src={player.image}
                     alt={player.name}
@@ -75,9 +76,9 @@ export default function PagePlayer() {
     
 
     const searchByDefault = () => (
-        <Card className="p-4">
-            <CardTitle className="text-center text-lg font-bold">Résultats</CardTitle>
-            <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-4">
+        <Card className="p-6">
+            <CardTitle className="text-center text-lg font-bold mb-4">Résultats</CardTitle>
+            <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
                 {playerList?.players.sort((a, b) => a.name.localeCompare(b.name)).map((player) => renderPlayerCard(player))}
             </CardContent>
         </Card>
@@ -95,11 +96,11 @@ export default function PagePlayer() {
         }, {} as Record<string, PlayerData[]>);
 
         return (
-            <div className="space-y-4">
+            <div className="space-y-6">
                 {Object.keys(playerByTeam).map((team) => (
-                    <Card key={team} className="p-4">
-                        <CardTitle className="uppercase text-lg font-bold">{team}</CardTitle>
-                        <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-4">
+                    <Card key={team} className="p-6">
+                        <CardTitle className="uppercase text-lg font-bold mb-4">{team}</CardTitle>
+                        <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
                             {playerByTeam[team].map((player) => renderPlayerCard(player))}
                         </CardContent>
                     </Card>
@@ -115,15 +116,15 @@ export default function PagePlayer() {
         const unrankedPlayers = playerList.players.filter(player => player.place === 0);
 
         return (
-            <Card className="p-4">
-                <CardTitle className="text-center text-lg font-bold">Classement par Rang</CardTitle>
-                <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-4">
+            <Card className="p-6">
+                <CardTitle className="text-center text-lg font-bold mb-4">Classement par Rang</CardTitle>
+                <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
                     {rankedPlayers.map((player) => renderPlayerCard(player, `Rang : ${player.place}`))}
                 </CardContent>
                 {unrankedPlayers.length > 0 && (
-                    <div className="mt-6">
-                        <CardTitle className="text-center text-lg font-bold">Joueurs Non Classés</CardTitle>
-                        <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-4">
+                    <div className="mt-8">
+                        <CardTitle className="text-center text-lg font-bold mb-4">Joueurs Non Classés</CardTitle>
+                        <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
                             {unrankedPlayers.map((player) => renderPlayerCard(player, "Non Classé"))}
                         </CardContent>
                     </div>
@@ -144,11 +145,11 @@ export default function PagePlayer() {
         }, {} as Record<string, PlayerData[]>);
 
         return (
-            <div className="space-y-4">
+            <div className="space-y-6">
                 {Object.keys(playerByTier).map((tier) => (
-                    <Card key={tier} className="p-4">
-                        <CardTitle className="uppercase text-lg font-bold">Joueur Tier {tier}</CardTitle>
-                        <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 mt-4">
+                    <Card key={tier} className="p-6">
+                        <CardTitle className="uppercase text-lg font-bold mb-4">Joueur Tier {tier}</CardTitle>
+                        <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
                             {playerByTier[tier].map((player) => renderPlayerCard(player))}
                         </CardContent>
                     </Card>
@@ -165,20 +166,33 @@ export default function PagePlayer() {
         tier: searchByTier,
     };
 
+    if (error) {
+        return (
+            <div className="min-h-screen bg-gray-100">
+                <Header title={"JOUEURS"} />
+                <div className="px-6 py-8">
+                    <Card className="p-8 text-center">
+                        <p className="text-lg text-red-600">{error}</p>
+                    </Card>
+                </div>
+            </div>
+        );
+    }
+
     return (
-        <div>
+        <div className="min-h-screen bg-gray-100">
             <Header title={"JOUEURS"} />
-            <div className="px-4 py-4 gap-4 space-y-4">
-                <Card className="px-4 py-4 gap-4 space-y-4">
-                    <CardTitle className="flex justify-center">
+            <div className="px-6 py-8 space-y-6">
+                <Card className="p-6">
+                    <CardTitle className="flex justify-center mb-4">
                         Choisissez un mode de recherche
                     </CardTitle>
-                    <div className="flex flex-rows-1 justify-center gap-2">
+                    <div className="flex flex-wrap justify-center gap-3">
                         {["default", "team", "rank", "tier"].map((option) => (
                             <Button
                                 key={option}
                                 onClick={() => setSearch(option as searchList)}
-                                className={`px-4 py-2 rounded-md font-medium transition-colors duration-200 ${
+                                className={`px-6 py-3 rounded-md font-medium transition-colors duration-200 ${
                                     search === option ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                                 }`}
                             >
@@ -187,8 +201,7 @@ export default function PagePlayer() {
                         ))}
                     </div>
                 </Card>
-            </div>
-            <div className="px-4 py-4 gap-4 space-y-4">
+                
                 {searchFunctions[search]?.()}
             </div>
         </div>

@@ -33,24 +33,47 @@ type PlayerData = {
   image: string;
 };
 
-export default function Sliderss({json}:{json:string}) {
-  const [players, setPlayers] = useState<PlayerData[]>([]); // Corrected type
+export default function PlayerCarousel({dataUrl}:{dataUrl:string}) {
+  const [players, setPlayers] = useState<PlayerData[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchPlayers = async () => {
+    const fetchPlayerData = async () => {
       try {
-        const response = await fetch(json);
+        const response = await fetch(dataUrl);
         if (!response.ok) {
-          throw new Error('Failed to fetch players data');
+          throw new Error(`Échec du chargement des données: ${response.status}`);
         }
         const data = await response.json();
-        setPlayers(data.players); // Assuming data.players is an array
+        setPlayers(data.players || []);
+        setError(null);
       } catch (error) {
-        console.error('Error fetching players data:', error);
+        setError('Impossible de charger les données des joueurs');
+        setPlayers([]);
       }
     };
-    fetchPlayers();
-  }, [json]);
+    fetchPlayerData();
+  }, [dataUrl]);
+
+  if (error) {
+    return (
+      <div className="p-6">
+        <Card className="p-4 text-center text-red-600">
+          {error}
+        </Card>
+      </div>
+    );
+  }
+
+  if (players.length === 0) {
+    return (
+      <div className="p-6">
+        <Card className="p-4 text-center text-gray-600">
+          Chargement des joueurs...
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <Carousel
@@ -62,8 +85,8 @@ export default function Sliderss({json}:{json:string}) {
       customTransition="transform 0.5s ease-in-out"
     >
       {players.map((player) => (
-        <div key={player.name}>
-          <Card className="p-2 bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
+        <div key={player.name} className="p-2">
+          <Card className="p-4 bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
             <Image
               src={player.image}
               alt={player.name}
@@ -72,7 +95,7 @@ export default function Sliderss({json}:{json:string}) {
               height={150}
               priority
             />
-            <CardContent className="mt-2 text-center">
+            <CardContent className="mt-4 text-center">
               <CardTitle className="font-semibold">{player.name}</CardTitle>
               <div className="text-sm text-gray-600">Team: {player.team}</div>
               <div className="text-sm text-gray-600">Place: {player.place}</div>
