@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import { Card, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { PlayerDetails, Character, TournamentResult, Placement } from '@/types';
+import { PlayerDetails, TournamentResult } from '@/types';
 
 import Header from '@/app/component/header';
 

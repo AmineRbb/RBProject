@@ -6,7 +6,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import { Card, CardTitle, CardContent } from '@/components/ui/card';
-import { TeamsList, TeamsData, TeamPlayer } from '@/types';
+import { TeamsList, TeamsData } from '@/types';
 
 import Header from '../component/header';
 
