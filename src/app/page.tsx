@@ -74,7 +74,7 @@ export default function Home() {
                         </CardHeader>
                         <CardContent className="MontserratMedium flex flex-col items-center gap-4">
                             <p className="text-center">
-                                Voir la liste des joueurs qui ont pu participé aux nombreux tournois ainsi que leurs différents résultats.
+                                Voir la liste des joueurs qui ont pu participer aux nombreux tournois ainsi que leurs différents résultats.
                             </p>
                             <Button onClick={() => handleClick("/player")} className="bg-blue-600 text-white hover:bg-blue-700 transition duration-300">
                                 Voir Joueurs

@@ -109,7 +109,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-  background-image: url('/smash fresque.svg'); /* Rempacez par le chemin de votre image */
+    background-image: url('/smash fresque.svg'); /* Remplacez par le chemin de votre image */
     background-repeat: repeat-x;
     background-size: cover;
     animation: move-background 120s linear infinite;
