@@ -1,6 +1,6 @@
 
 type Props = {
-    title: string | undefined;
+    title: string;
 }
 
 export default function Header({ title }: Props) {
