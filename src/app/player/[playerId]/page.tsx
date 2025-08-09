@@ -1,41 +1,13 @@
-"use client";
-import { Card, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import Header from "@/app/component/header";
+'use client';
 
-type PlayerData = {
-    id: number;
-    name: string;
-    age: string;
-    team: string;
-    photo: string;
-    commentary: string;
-    mains: Character[];
-    secondaries: Character[];
-    results: TournamentResult[];
-}
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
-type Character = {
-    id: number;
-    name: string;
-    image: string;
-}
+import { Card, CardTitle } from '@/components/ui/card';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { PlayerDetails, Character, TournamentResult, Placement } from '@/types';
 
-type TournamentResult = {
-    id: number;
-    name: string;
-    placement: Placement;
-    value: string;
-    date: string; // Format YYYY-MM-DD
-}
-
-type Placement = {
-    place: string;
-    wins: string[];
-    lose: string[]
-}
+import Header from '@/app/component/header';
 
 const capitalizeName = (name: string) => {
     if (!name) return "";
@@ -43,7 +15,7 @@ const capitalizeName = (name: string) => {
 };
 
 export default function PagePlayerId({ params }: { params: { playerId: string }}) {
-    const [playerDetails, setPlayerDetails] = useState<PlayerData>();
+    const [playerDetails, setPlayerDetails] = useState<PlayerDetails>();
     const [showMajorTournaments, setShowMajorTournaments] = useState(false);
 
     useEffect(() => {

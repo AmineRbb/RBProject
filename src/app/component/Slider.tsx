@@ -1,10 +1,12 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { PlayerData } from '@/types';
 
 const responsive = {
   superLargeDesktop: {
@@ -23,14 +25,6 @@ const responsive = {
     breakpoint: { max: 464, min: 0 },
     items: 1,
   },
-};
-
-type PlayerData = {
-  name: string;
-  team: string;
-  place: number;
-  tier: number;
-  image: string;
 };
 
 export default function PlayerCarousel({dataUrl}:{dataUrl:string}) {

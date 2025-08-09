@@ -1,35 +1,18 @@
-'use client'
-import { Card, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import Header from "../component/header";
+'use client';
 
-type TournoiList = {
-    tournois:TournoiData[]
-}
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
-type TournoiData = {
-    id:number,
-    name:string,
-    nameForLink:string,
-    logo:string,
-    nbJoueurs:number,
-    rang:string,
-    date:string
-    bigThree:BigThree
-}
+import { Card, CardTitle } from '@/components/ui/card';
+import { TournamentList, TournamentData } from '@/types';
 
-type BigThree = {
-    first:string,
-    second:string,
-    third:string
-}
+import Header from '../component/header';
 
 export default function Tournoi() {
     const router = useRouter();
 
-    const [tournoiList, setTournoiList] = useState<TournoiList>();
+    const [tournoiList, setTournoiList] = useState<TournamentList>();
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
@@ -74,7 +57,7 @@ export default function Tournoi() {
         }
     }
 
-    const renderTournamentCard = (tournoi:TournoiData) => {
+    const renderTournamentCard = (tournoi: TournamentData) => {
         return(
             <button onClick={() => handleClick(tournoi.nameForLink)} key={tournoi.id} className="w-full transform transition-transform duration-300 hover:scale-105">
                 <Card className={`p-6 max-w-3xl mx-auto rounded-xl shadow-md`}>

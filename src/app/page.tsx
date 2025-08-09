@@ -1,10 +1,13 @@
-'use client'
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Header from "./component/header";
-import PlayerCarousel from "./component/Slider";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+'use client';
+
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+import Header from './component/header';
+import PlayerCarousel from './component/Slider';
 
 export default function Home() {
     const router = useRouter();

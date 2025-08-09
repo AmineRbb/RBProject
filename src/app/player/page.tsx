@@ -1,24 +1,14 @@
 'use client';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import Header from "../component/header";
 
-type PlayerList = {
-    players:PlayerData[]
-}
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
-type PlayerData = {
-    name: string,
-    team: string,
-    place: number,
-    tier: number,
-    image: string,
-}
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardTitle } from '@/components/ui/card';
+import { PlayerList, PlayerData, SearchFilter } from '@/types';
 
-type searchList =  "default" | "team" | "rank" | "tier";
+import Header from '../component/header';
 
 const capitalizeName = (name: string) => {
     if (!name) return "";
@@ -29,7 +19,7 @@ export default function PagePlayer() {
     const router = useRouter();
 
     const [playerList, setPlayerList] = useState<PlayerList>();
-    const [search, setSearch] = useState<searchList>("default");
+    const [search, setSearch] = useState<SearchFilter>("default");
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
@@ -191,7 +181,7 @@ export default function PagePlayer() {
                         {["default", "team", "rank", "tier"].map((option) => (
                             <Button
                                 key={option}
-                                onClick={() => setSearch(option as searchList)}
+                                onClick={() => setSearch(option as SearchFilter)}
                                 className={`px-6 py-3 rounded-md font-medium transition-colors duration-200 ${
                                     search === option ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                                 }`}

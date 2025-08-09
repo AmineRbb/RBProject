@@ -1,11 +1,14 @@
 'use client';
 
-import Header from '../component/header';
-import { Card, CardTitle, CardContent } from '@/components/ui/card';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+
+import { Card, CardTitle, CardContent } from '@/components/ui/card';
+import { TeamsList, TeamsData, TeamPlayer } from '@/types';
+
+import Header from '../component/header';
 
 const responsive = {
   superLargeDesktop: {
@@ -24,23 +27,6 @@ const responsive = {
     breakpoint: { max: 464, min: 0 },
     items: 1,
   },
-};
-
-type Joueur = {
-  name: string;
-  image: string;
-};
-
-type TeamsData = {
-  name: string;
-  nameForLink: string;
-  imageTeam: string;
-  nbJoueurs: number;
-  joueurs: Joueur[];
-};
-
-type TeamsList = {
-  teams: TeamsData[];
 };
 
 export default function Teams() {

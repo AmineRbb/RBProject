@@ -1,31 +1,17 @@
-'use client'
-import Header from "@/app/component/header";
-import { Card, CardTitle } from "@/components/ui/card";
-import { TableBody, TableCell, TableHead, TableHeader, TableRow, Table } from "@/components/ui/table";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+'use client';
 
-type Joueur = {
-    name: string,
-    team: string,
-    imageMain: string,
-    seeding: number,
-    place: string,
-}
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
-type Tournament = {
-    name: string,
-    nbJoueurs: number,
-    startgg: string,
-    date: string,
-    rank: string,
-    logo: string,
-    joueurs: Joueur[]
-}
+import { Card, CardTitle } from '@/components/ui/card';
+import { TableBody, TableCell, TableHead, TableHeader, TableRow, Table } from '@/components/ui/table';
+import { TournamentDetails, TournamentPlayer } from '@/types';
+
+import Header from '@/app/component/header';
 
 export default function TournoiId({ params }: { params: { tournoiId: string }}) {
 
-    const [tournamentDetails, setTournamentDetails] = useState<Tournament>();
+    const [tournamentDetails, setTournamentDetails] = useState<TournamentDetails>();
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
@@ -51,7 +37,7 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
         acc[joueur.place] = acc[joueur.place] || [];
         acc[joueur.place].push(joueur);
         return acc;
-    }, {} as { [place: string]: Joueur[] });
+    }, {} as { [place: string]: TournamentPlayer[] });
 
     const getColorForPlacement = (place: string) => {
         const placementColors: Record<string, string> = {
@@ -88,7 +74,7 @@ export default function TournoiId({ params }: { params: { tournoiId: string }}) 
 
     return (
     <div className="min-h-screen bg-gray-100">
-        <Header title={tournamentDetails?.name} />
+        <Header title={tournamentDetails?.name || ''} />
         <div className="px-6 py-8">
                 <Card className="mb-8 p-8 bg-white shadow-lg rounded-lg">
                     <div className="flex flex-col md:flex-row justify-between">
