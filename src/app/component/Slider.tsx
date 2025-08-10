@@ -78,16 +78,18 @@ export default function PlayerCarousel({dataUrl}:{dataUrl:string}) {
       transitionDuration={500}
       customTransition="transform 0.5s ease-in-out"
     >
-      {players.map((player) => (
+      {players.map((player, index) => (
         <div key={player.name} className="p-2">
           <Card className="p-4 bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
             <Image
               src={player.image}
               alt={player.name}
               className="rounded-full w-24 h-24 object-cover object-top"
-              width={150}
-              height={150}
-              priority
+              width={96}
+              height={96}
+              priority={index < 3}
+              loading={index < 3 ? 'eager' : 'lazy'}
+              sizes="96px"
             />
             <CardContent className="mt-4 text-center">
               <CardTitle className="font-semibold">{player.name}</CardTitle>

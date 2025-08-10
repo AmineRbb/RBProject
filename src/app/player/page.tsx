@@ -45,16 +45,18 @@ export default function PagePlayer() {
         router.push( '/player/' + page)
     }
 
-    const renderPlayerCard = (player: PlayerData, extraInfo?: string) => (
+    const renderPlayerCard = (player: PlayerData, extraInfo?: string, index?: number) => (
         <button key={player.name} onClick={() => handleClick(player.name)} className="hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
             <Card className="p-4 bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
                 <Image
                     src={player.image}
                     alt={player.name}
                     className="rounded-full w-24 h-24 object-cover object-top"
-                    width={150}
-                    height={150}
-                    priority
+                    width={96}
+                    height={96}
+                    priority={index !== undefined && index < 6}
+                    loading={index !== undefined && index < 6 ? 'eager' : 'lazy'}
+                    sizes="96px"
                 />
                 <div className="mt-2 text-center font-semibold">{capitalizeName(player.name)}</div>
                 {extraInfo && (
@@ -69,7 +71,7 @@ export default function PagePlayer() {
         <Card className="p-6">
             <CardTitle className="text-center text-lg font-bold mb-4">Résultats</CardTitle>
             <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-                {playerList?.players.sort((a, b) => a.name.localeCompare(b.name)).map((player) => renderPlayerCard(player))}
+                {playerList?.players.sort((a, b) => a.name.localeCompare(b.name)).map((player, index) => renderPlayerCard(player, undefined, index))}
             </CardContent>
         </Card>
     );
@@ -91,7 +93,7 @@ export default function PagePlayer() {
                     <Card key={team} className="p-6">
                         <CardTitle className="uppercase text-lg font-bold mb-4">{team}</CardTitle>
                         <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-                            {playerByTeam[team].map((player) => renderPlayerCard(player))}
+                            {playerByTeam[team].map((player, index) => renderPlayerCard(player, undefined, index))}
                         </CardContent>
                     </Card>
                 ))}
@@ -109,13 +111,13 @@ export default function PagePlayer() {
             <Card className="p-6">
                 <CardTitle className="text-center text-lg font-bold mb-4">Classement par Rang</CardTitle>
                 <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-                    {rankedPlayers.map((player) => renderPlayerCard(player, `Rang : ${player.place}`))}
+                    {rankedPlayers.map((player, index) => renderPlayerCard(player, `Rang : ${player.place}`, index))}
                 </CardContent>
                 {unrankedPlayers.length > 0 && (
                     <div className="mt-8">
                         <CardTitle className="text-center text-lg font-bold mb-4">Joueurs Non Classés</CardTitle>
                         <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-                            {unrankedPlayers.map((player) => renderPlayerCard(player, "Non Classé"))}
+                            {unrankedPlayers.map((player, index) => renderPlayerCard(player, "Non Classé", index))}
                         </CardContent>
                     </div>
                 )}
@@ -140,7 +142,7 @@ export default function PagePlayer() {
                     <Card key={tier} className="p-6">
                         <CardTitle className="uppercase text-lg font-bold mb-4">Joueur Tier {tier}</CardTitle>
                         <CardContent className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-                            {playerByTier[tier].map((player) => renderPlayerCard(player))}
+                            {playerByTier[tier].map((player, index) => renderPlayerCard(player, undefined, index))}
                         </CardContent>
                     </Card>
                 ))}

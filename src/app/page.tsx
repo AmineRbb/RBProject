@@ -30,9 +30,10 @@ export default function Home() {
                                     src={"/logoRBB.png"}
                                     alt={"logoRBB"}
                                     className="rounded-full w-32 h-32 object-cover object-top mx-auto"
-                                    width={300}
-                                    height={300}
+                                    width={128}
+                                    height={128}
                                     priority
+                                    sizes="128px"
                                 />
                             </CardTitle>
                         </CardHeader>

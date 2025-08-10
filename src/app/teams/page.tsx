@@ -9,6 +9,7 @@ import { Card, CardTitle, CardContent } from '@/components/ui/card';
 import { TeamsList, TeamsData } from '@/types';
 
 import Header from '../component/header';
+import ImagePreloader from '../component/ImagePreloader';
 
 const responsive = {
   superLargeDesktop: {
@@ -51,7 +52,7 @@ export default function Teams() {
     fetchTeamsData();
   }, []);
 
-  const renderTeamCard = (team: TeamsData) => {
+  const renderTeamCard = (team: TeamsData, index: number) => {
     return (
       <Card className="p-8 mx-4 max-w-4xl rounded-3xl shadow-lg bg-white transition-all hover:shadow-2xl">
         <div className="grid grid-cols-6 gap-6 items-center">
@@ -62,7 +63,8 @@ export default function Teams() {
               className="rounded-full border-4 border-gray-200"
               width={100}
               height={100}
-              priority
+              priority={index === 0}
+              loading={index === 0 ? 'eager' : 'lazy'}
             />
           </div>
           <div className="col-span-3 flex flex-col justify-center">
@@ -79,16 +81,17 @@ export default function Teams() {
               transitionDuration={500}
               customTransition="transform 0.5s ease-in-out"
             >
-              {team.joueurs.map((joueur) => (
+              {team.joueurs.map((joueur, playerIndex) => (
                 <div key={joueur.name} className="p-3">
                   <Card className="p-6 bg-gray-50 rounded-xl shadow-lg flex flex-col items-center transition-all transform hover:scale-105">
                     <Image
                       src={joueur.image}
                       alt={joueur.name}
                       className="rounded-full w-24 h-24 object-cover border-2 border-gray-300"
-                      width={150}
-                      height={150}
-                      priority
+                      width={96}
+                      height={96}
+                      loading="lazy"
+                      sizes="96px"
                     />
                     <CardContent className="mt-4 text-center">
                       <CardTitle className="font-semibold text-xl text-gray-800">
@@ -118,9 +121,18 @@ export default function Teams() {
     );
   }
 
+  // Préparer les images à précharger (logos d'équipes et quelques joueurs)
+  const imagesToPreload = teamList?.teams.slice(1).flatMap(team => [
+    team.imageTeam,
+    ...team.joueurs.slice(0, 3).map(joueur => joueur.image)
+  ]) || [];
+
   return (
     <div className="min-h-screen bg-gray-100">
       <Header title="TEAMS" />
+      {imagesToPreload.length > 0 && (
+        <ImagePreloader imageSources={imagesToPreload} />
+      )}
       <div className="px-6 py-8">
         <Card className="p-6 mb-8 bg-white shadow-lg rounded-lg">
           <CardTitle className="flex justify-center text-2xl font-semibold">
@@ -129,7 +141,7 @@ export default function Teams() {
         </Card>
         
         <div className="flex flex-col items-center space-y-8">
-          {teamList?.teams.map((team) => renderTeamCard(team))}
+          {teamList?.teams.map((team, index) => renderTeamCard(team, index))}
         </div>
       </div>
     </div>
